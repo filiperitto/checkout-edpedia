@@ -1,0 +1,243 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="pt-br">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- Meta para HTML puro -->
+    <title>Edpedia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    <meta name="description" content="WEBNAR Edpedia">
+    <meta name="keywords" content="Sample, HTML5, CSS3">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="imgs/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="main">
+        <header>
+            <img src="imgs/logo.svg">
+
+            <div class="text-box">
+                <h1>INFORMAÇÕES DE PAGAMENTO</h1>
+    
+                <h3>PREENCHA OS CAMPOS ABAIXO PARA EFETUAR SEU PEDIDO</h3>
+            </div>
+        </header>
+        <div class="wrap moduleContent">
+            <section class="prod-box">
+                <div class="img-wrap">
+                    <img alt="produto" src="imgs/Imagem_7_2x.png">
+                </div>
+                <div class="header-product">
+                    <h3>7 Dicas Para Economizar Dinheiro</h3>
+                    <h4><span>Oferta principal</span> 12 x de R$ 14,99*</h4>
+                </div>
+            </section>
+
+            <section class="form-content">
+                <form id="checkout" method="POST" action='index.php' data-ajax='false'>
+                    <input type='hidden' name='page' value='assinar_cc'>
+                    <input type='hidden' name='origem' value='##ORIGEM##'>
+                    <input type='hidden' name='id_tipo_assinatura' value='##ID_TIPO_ASSINATURA##'>
+                    <input type="hidden" name="pgCheckout" value="home" />
+                    <input type="hidden" name="pgObrigado" value="obrigado" />
+                    <input type='hidden' name='tipo' value='iugu'>
+                    <input type='hidden' name='tokenIugu' id="tokenIugu" value=''>
+
+                    <div class="card card-section">
+                        <div class="title-box">
+                            <h3>Informações Pessoais</h3>
+                        </div>
+                        <div class="erro">##MSG_ERRO##</div>
+                        <div class="form-wrap">
+                            <div class="form-input form-nome">
+                                <label for="first-name">Nome Completo</label>
+                                <input name="first-name" type="text" id="first-name" size="2" placeholder="Nome Completo">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-cpf">
+                                <label for="cpf">CPF / CNPJ</label>
+                                <input name="cpf" id="cpf" maxlength="15" type="text" placeholder="CPF / CNPJ" required >
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-cep">
+                                <label for="cep">CEP (Busca de Endereços)</label>
+                                <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" placeholder="CEP (Busca de Endereços)">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-celular">
+                                <label for="telefone">Celular</label>
+                                <input id="telefone" name="telefone" placeholder="Celular"
+                                maxlength="11" type="text">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-email">
+                                <label for="email">E-mail</label>
+                                <input id="email" name="email" maxlength="50" type="text" placeholder="E-mail">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-email">
+                                <label for="email-confirm">Confirme seu email</label>
+                                <input id="email-confirm" name="email-confirm" maxlength="50" type="text" placeholder="Confirme seu e-mail">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card card-section">
+                        <div class="title-box">
+                            <h3>Cartão de Crédito</h3>
+                            <img alt="" src="./imgs/cartoes.png">
+                        </div>
+                        <div class="form-wrap">
+                            <div class="form-input form-numero-cartao">
+                                <label for="number_c">Número do Cartão*</label>
+                                <span id="generatecard"
+                                style="display:none">generate random</span>
+                                <input name="number_c" id="number_c" type="text" placeholder="Somente números">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-nome-cartao">
+                                <label for="holdername_c">Titular do Cartão*</label>
+                                <input onkeyup="value=value.replace(/[^a-zA-Z	 ]/g,'')" name="holdername_c"
+                                id="holdername_c" maxlength="20" type="text" required placeholder="Nome impresso no cartão">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-validade">
+                                <label for="exp_c">MM</label>
+                                <input id="exp_c" name="exp_c" type="text" placeholder="MM/AA">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-validade">
+                                <label for="exp_c">AA</label>
+                                <input id="exp_c" name="exp_c" type="text" placeholder="MM/AA">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-cvv">
+                                <label for="cvv_c">Cód. de Segurança</label>
+                                <input id="cvv_c" name="cvv_c" type="text" placeholder="3 ou 4 dígitos">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+
+                            <div class="form-input form-parcelas">
+                                <label>Valor Mensal</label>
+                                <select id="installments" name="installments">
+                                    ##PARCELAS##
+                                </select>
+                                </input>
+                            </div>
+
+                            <div class="form-checkbox termos">
+                                <input type="checkbox" class="checkbox" name="envia_email_produto" id="terms" checked>
+                                <label class="link-terms" for="terms">Li e Aceito os <a href="?page=navega&pg=termos" style="color: #75E2F8;" target="_blank">Termos de Uso</a></label>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+
+                            <div class="form-checkbox termos">
+                                
+                                <label class="link-terms" for="terms">Ao fazer seu pedido, você concorda com a política de privacidade e os termos de uso do Dayan. Você receberá as últimas atualizações do curso e notícias do Dayan.</label>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+
+                    <div class="form-cont-btn">
+                        <button class="btn" id="btn-submit">
+                            Confirmar pedido
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="order-box">
+                <img class="resumo-prod" alt="img-order-topo" src="imgs/Imagem_31_2x.png">
+                
+                <div class="prod-box-resumo">
+                    <div class="img-wrap">
+
+                    </div>
+                    <div class="header-product">
+                        <h3>7 Dicas Para Economizar Dinheiro</h3>
+                        <h4><span>Oferta principal</span> 12 x de R$ 14,99*</h4>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="header-garant">
+                        <h2>Garantia Incondicional</h2>
+                        <div class="star"></div>
+                    </div>
+                    <div class="desc-garant">
+                        <p>De 07 Dias!<br>
+                            Sabemos da qualidade do que entregamos e por isso você tem a garantia incondicional de 7 dias. Isso significa que se algo, qualquer coisa não agradar você, caso ache que seus objetivos não serão atingidos, basta enviar um simples e-mail para o suporte e nós reembolsaremos 100% do valor do seu investimento, sem burocracia alguma!
+                        </p>
+                    </div>
+
+                    <label>
+                        <span>29</span>
+                        <p>PESSOAS ESTÃO ADQUIRINDO TAMBÉM</p>
+                    </label>
+                </div>
+
+            </section>
+        </div>
+        <footer>
+            <div class="wrap">
+                <img alt="logo" src="#">
+                <p>
+                    Edpedia Cia Ltda,<br>
+                    CNPJ 32.985.885/0001-11
+                </p>
+                <p>
+                    Caro consumidor e usuário: As informações dispostas neste site e em qualquer site da empresa - Dayan Siebra e Cia Ltda, inscrita no CNPJ 32.985.885/0001-11, são publicadas exclusivamente para fins informativos e não podem ser consideradas como aconselhamento médico pessoal. Logo, as informações aqui contidas, não substituem uma consulta com um profissional devidamente credenciado pelas autoridades de saúde. O conteúdo aqui disposto possui caráter informativo e esta aberto ao público, sendo considerado confiável pela saúde pública na sua data de publicação. CRM:7024 <br>
+                    Termos de Uso <br>
+                    Política de Privacidade
+                </p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

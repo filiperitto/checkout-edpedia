@@ -1,0 +1,55 @@
+//
+// Some Useful color Vars via http://clrs.cc/
+//
+
+// Fonts
+$font-regular: 'Work Sans', sans-serif
+$font-title: 'Work Sans', sans-serif
+
+
+// Basic Colors
+$white: #ffffff
+$black: #000000
+$laranja: #EF442B
+$dark-blue: #223C53
+$blue: #223C53
+$yellow: #F3CC9E
+
+
+// Socials
+
+$facebook: #3b5998
+$twitter: #00aced
+$linkedin: #007bb5
+
+//
+
+// Background
+$bg: #292932
+
+// Typography
+
+//
+
+// Mixin's
+
+=linearGradientTopBottom($top, $bottom)
+  background: $top
+  background: -moz-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom))
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -o-linear-gradient(top, $top 0%, $bottom 100%)
+  background: -ms-linear-gradient(top, $top 0%, $bottom 100%)
+  background: linear-gradient(to bottom, $top 0%, $bottom 100%)
+
+=linearGradientLeftRight($left, $right)
+  background: $left
+  background: -moz-linear-gradient(90deg, rgba($left, 1) 0%, rgba($right, 0) 100%)
+  background: -webkit-linear-gradient(90deg, rgba($left, 1) 0%, rgba($right, 0) 100%)
+  background: linear-gradient(90deg, rgba($left, 1) 0%, rgba($right, 0) 100%)
+
+=linearGradientLeftMiddleRight($left, $middle, $right)
+  background: $left
+  background: -moz-linear-gradient(90deg, rgba($left, 1) 0%, rgba($middle, 1) 45%, rgba($right, 0) 100%)
+  background: -webkit-linear-gradient(90deg, rgba($left, 1) 0%, rgba($middle, 1) 45%, rgba($right, 0) 100%)
+  background: linear-gradient(90deg, rgba($left, 1) 0%, rgba($middle, 1) 45%, rgba($right, 0) 100%)

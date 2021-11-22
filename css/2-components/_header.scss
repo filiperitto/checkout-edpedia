@@ -1,0 +1,40 @@
+header{
+    width: 100%;
+    height: auto;
+    padding: 40px 0 120px;
+    background: url(../imgs/bg.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include respond-to-min(750){
+        padding: 64px 0 150px;
+    }
+    .text-box{
+        margin-top: 63px;
+        h1{
+            font-size: 31px;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            margin: 0;
+            text-align: center;
+            margin-bottom: 18px;
+            @include respond-to-min(750){
+                font-size: 39px;
+                margin-bottom: 20px;
+            }
+        }
+        h3{
+            margin: 0;
+            font-size: 16px;
+            letter-spacing: 0px;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #83DEDD;
+            opacity: 1;
+            text-align: center;
+        }
+    }
+}
