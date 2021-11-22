@@ -1,0 +1,213 @@
+
+//== Checkout Section ::::
+.moduloMinhaconta{
+    padding-top: 80px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    .wrap{
+        max-width: 1100px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column-reverse;
+        @include respond-to-min(750){
+            flex-direction: column;
+        }
+    }
+    .resumo-box{
+        .card-section{
+            width: calc(100%);
+            background: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+            padding: 0 10px;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            h3{
+                display: flex;
+                align-items: center;
+                margin: 0;
+                padding: 0;
+                margin: 10px 0 25px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+                /* identical to box height */
+    
+    
+                /* CTA & Texto */
+    
+                color: #202020;
+    
+                padding: 15px 20px;
+                width: calc(100% + 20px);
+                margin-left: -10px;
+                margin-right: -10px;
+    
+                border-top: 1px solid#e6e6e6;
+                border-bottom: 1px solid #e6e6e6;
+                svg{
+                    margin-right: 15px;
+                    path{
+                        fill: #EB00FF;
+                    }
+                }
+            }
+            .account-box{
+                width: 100%;
+                display: flex;
+                margin-bottom: 25px;
+                align-items: center;
+                @include respond-to-min(750){
+                    align-items: flex-start;
+                    padding: 0 30px;
+                }
+                .thumb-img{
+                    width: 130px;
+                    height: 130px;
+                    //background: #ededed;
+                    flex-shrink: 0;
+                    border-radius: 3px;
+                    @include respond-to-min(750){
+                        width: 160px;
+                        height: 160px;
+                    }
+                    svg{
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+                .info-box{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 10px;
+                    @include respond-to-min(750){
+                        padding-left: 20px;
+                        height: 100%;
+                    }
+                    .infos{
+                        @include respond-to-min(750){
+                            width: 100%;
+                        }
+                        .header-infos{
+                            width: 100%;
+                            @include respond-to-min(750){
+                                display: flex;
+                                align-items: baseline;
+                            }
+                            .names-info{
+                                margin-bottom: 20px;
+                                
+                                @include respond-to-min(750){
+                                    margin-right: 15px;
+                                }
+                                h4{
+                                    margin: 0;
+                                    padding: 0;
+                                    font-family: Lato;
+                                    font-style: normal;
+                                    font-weight: bold;
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                    margin-bottom: 2px;
+                                    /* identical to box height */
+                                    
+                                    
+                                    color: #000000;
+                                    
+                                }
+                                h5{
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 16px;
+                                    line-height: 19px;
+                                    letter-spacing: -0.015em;
+                                    
+                                    color: #838485;
+                                    
+                                }
+                            }
+
+                        }
+                    }
+                    .data-box{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        @include respond-to-min(750){
+                            flex-shrink: 0;
+                            align-items: flex-end;
+                        }
+                        ul{
+                            width: 100%;
+                            height: auto;
+                            margin: 0;
+                            padding: 0;
+                            list-style: none;
+                            display: flex;
+                            flex-direction: column;
+                            padding-bottom: 30px;
+                            li{
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-start;
+                                padding: 5px;
+                                padding: 15px 10px;
+                                border-bottom: 1px solid #e6e6e6;
+                                &:last-child{
+                                    border-bottom: none;
+                                }
+                                a{
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    padding: 15px 10px;
+                                    &:hover{
+                                        background: #F4F6FD;
+                                    }
+                                }
+                                .nameTitle{
+                                    width: 20%;
+                                    flex-shrink: 0;
+                                    font-weight: bold;
+                                    font-family: 'Lato';
+                                    font-style: normal;
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                    /* identical to box height */
+                                    
+                                    
+                                    /* CTA & Texto */
+                                    
+                                    color: #202020;
+                                }
+                                .userDados{
+                                    width: 100%;
+                                    font-weight: bold;
+                                    font-family: 'Lato';
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                    /* identical to box height */
+                                    
+                                    
+                                    /* CTA & Texto */
+                                    
+                                    color: #828687;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//========== /Checkout Section

@@ -1,0 +1,29 @@
+.btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height, or 136% */
+    
+    
+    color: #FFFFFF;
+    
+    color: #ffffff;
+    background: $btn-active;
+    padding: 10px 15px 10px;
+    border-radius: 27px;
+    display: table;
+    text-align: center;
+    border: 2px solid $btn-active;
+    &:hover{
+        background: $btn-active;
+        border: 2px solid $btn-active;
+    }
+    &:active{
+        border: 2px solid $btn-active;
+    }
+    &:focus{
+        outline: none;
+    }
+}

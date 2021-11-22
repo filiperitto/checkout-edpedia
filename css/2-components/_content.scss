@@ -124,6 +124,7 @@
                     width: 100%;
                     padding-right: 16px;
                     padding-bottom: 16px;
+                    position: relative;
 
                     @include respond-to-min(750) {
                         width: 50%;
@@ -142,6 +143,12 @@
                         color: #FFFFFF;
                         opacity: 1;
                         display: inline-block;
+                        position: absolute;
+                        top: auto;
+                        bottom: 10px;
+                        padding-right: 16px;
+                        right: auto;
+                        left: 0;
                     }
                 }
                 .form-checkbox{

@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Avenir LT 35';
+    src: url('AvenirLT-LightOblique.woff2') format('woff2'),
+        url('AvenirLT-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT 45 Book';
+    src: url('AvenirLT-BookOblique.woff2') format('woff2'),
+        url('AvenirLT-BookOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT 55 Roman';
+    src: url('AvenirLT-Heavy.woff2') format('woff2'),
+        url('AvenirLT-Heavy.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT 65';
+    src: url('AvenirLT-MediumOblique.woff2') format('woff2'),
+        url('AvenirLT-MediumOblique.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT 55 Roman';
+    src: url('AvenirLT-HeavyOblique.woff2') format('woff2'),
+        url('AvenirLT-HeavyOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT 35';
+    src: url('AvenirLT-Light.woff2') format('woff2'),
+        url('AvenirLT-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT 55 Roman';
+    src: url('AvenirLT-Oblique.woff2') format('woff2'),
+        url('AvenirLT-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT 65';
+    src: url('AvenirLT-Medium.woff2') format('woff2'),
+        url('AvenirLT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT 55 Roman';
+    src: url('AvenirLT-Roman.woff2') format('woff2'),
+        url('AvenirLT-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Avenir LT 45 Book';
+    src: url('AvenirLT-Book.woff2') format('woff2'),
+        url('AvenirLT-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

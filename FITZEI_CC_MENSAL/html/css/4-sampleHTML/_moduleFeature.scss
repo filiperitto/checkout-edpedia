@@ -1,0 +1,93 @@
+//== Feature Section ::::
+.moduleFeature{
+    background: #fff;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    @include respond-to-min(750){
+        padding-top: 71px;
+    }
+    .box-cont{
+        align-items: flex-start;
+    }
+    .img-box{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 30px;
+        order: 2;
+        @include respond-to-min(750){
+            width: 50%;
+            position: relative;
+            order: 1;
+        }
+        img{
+            width: 100%;
+            position: relative;
+            z-index: 1;
+            @include respond-to-min(750){
+                //max-width: 250px;
+            }
+        }
+    }
+    .text-box{
+        width: 100%;
+        order: 1;
+
+        @include respond-to-min(750){
+            width: 50%;
+            padding: 0 70px;
+            order: 2;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            //padding-top: 230px;
+        }
+        h1{
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 44px;
+            /* or 139% */
+
+            text-align: center;
+
+            color: #111111;
+
+            @include respond-to-min(750){
+                font-size: 39px;
+                line-height: 58px;
+
+                text-align: left;
+            }
+        }
+        p{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 26px;
+            /* or 144% */
+
+            text-align: center;
+
+            color: #939FA4;
+
+            @include respond-to-min(750){
+                font-size: 18px;
+                line-height: 26px;
+
+                text-align: left;
+            }
+        }
+        .btn{
+            margin: 0 auto;
+            @include respond-to-min(750){
+                margin: 0;
+            }
+        }
+    }
+}
+//========== /Feature Section

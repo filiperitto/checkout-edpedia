@@ -1,0 +1,481 @@
+
+//== Checkout Section ::::
+.moduloCheckout{
+    padding-top: 80px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    .wrap{
+        //max-width: 1100px;
+        padding: 5px;
+        display: flex;
+        flex-direction: column-reverse;
+        @include respond-to-min(750){
+            flex-direction: column;
+        }
+    }
+    .resumo-box{
+        .card-section{
+            .produto-box{
+                width: 100%;
+                display: flex;
+                margin-bottom: 25px;
+                align-items: center;
+                @include respond-to-min(750){
+                    align-items: flex-start;
+                    padding: 0 30px;
+                }
+                .thumb-img{
+                    width: 130px;
+                    height: 130px;
+                    //background: #ededed;
+                    flex-shrink: 0;
+                    border-radius: 3px;
+                    @include respond-to-min(750){
+                        width: 160px;
+                        height: 160px;
+                    }
+                    svg{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .info-box{
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 10px;
+                    @include respond-to-min(750){
+                        flex-direction: row;
+                        padding-left: 35px;
+                        height: 100%;
+                    }
+                    .infos{
+                        @include respond-to-min(750){
+                            width: 100%;
+                        }
+                        .header-infos{
+                            width: 100%;
+                            @include respond-to-min(750){
+                                display: flex;
+                                align-items: baseline;
+                            }
+                            .names-info{
+                                margin-bottom: 20px;
+                                
+                                @include respond-to-min(750){
+                                    margin-right: 15px;
+                                }
+                                h4{
+                                    margin: 0;
+                                    padding: 0;
+                                    font-family: Lato;
+                                    font-style: normal;
+                                    font-weight: bold;
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                    margin-bottom: 2px;
+                                    /* identical to box height */
+                                    
+                                    
+                                    color: #000000;
+                                    
+                                }
+                                h5{
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    font-size: 16px;
+                                    line-height: 19px;
+                                    letter-spacing: -0.015em;
+                                    
+                                    color: #838485;
+                                    
+                                }
+                            }
+                            .tag{
+                                background: #FCD281;
+                                padding: 3px 10px;
+                                border-radius: 3px;
+                                font-family: 'Roboto';
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 16px;
+                                line-height: 19px;
+                                text-align: center;
+                                letter-spacing: -0.015em;
+                                
+                                color: #000000;
+                                
+                                @include respond-to-min(750){
+                                    margin-right: 15px;
+                                }
+                            }
+                            .avaliacao{
+                                display: flex;
+                                align-items: center;
+                                ul{
+                                    margin: 0;
+                                    padding: 0;
+                                    list-style: none;
+                                    display: flex;
+                                    margin-right: 10px;
+                                    li{
+                                        margin-right: 3px;
+                                        &:last-child{
+                                            margin-right: 0;
+                                        }
+                                    }
+                                }
+                                span{
+                                    margin-top: 3px;
+                                    font-family: Lato;
+                                    font-style: normal;
+                                    font-weight: bold;
+                                    font-size: 13px;
+                                    line-height: 16px;
+                                    /* identical to box height */
+                                    
+                                    letter-spacing: -0.015em;
+                                    
+                                    color: #000000;
+                                }
+                            }
+
+                        }
+                        .cont-intro{
+                            p{
+                                display: none;
+                                width: 80%;
+                                font-family: 'Lato';
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 14px;
+                                line-height: 22px;
+                                /* or 157% */
+
+
+                                /* Complementary text */
+
+                                color: #828687;
+                                @include respond-to-min(750){
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                    .prices-box{
+                        display: flex;
+                        align-items: center;
+                        @include respond-to-min(750){
+                            flex-shrink: 0;
+                            align-items: flex-end;
+                            width: 100%;
+                            justify-content: flex-end;
+                        }
+                        .real-price{
+                            margin-right: 5px;
+                            span{
+                                font-family: 'Roboto';
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 14px;
+                                line-height: 20px;
+                                letter-spacing: -0.015em;
+                                
+                                color: #000000;
+                            }
+                        }
+                        .desc-price{
+                            span{
+
+                                font-family: Lato;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 15px;
+                                line-height: 18px;
+                                /* identical to box height */
+                                
+                                letter-spacing: -0.015em;
+                                
+                                color: #727272;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .erro{
+        width: 100%;
+        display: none;
+        color: red;
+        width: 100%;
+        height: auto;
+        color: #ff3e3e;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        background: #f9c6da;
+        &.show{
+            display: block;
+        }
+
+    }
+    .card-section{
+        width: calc(100%);
+        background: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        padding: 0 10px;
+        border-radius: 3px;
+        margin-bottom: 30px;
+        .form-cont{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container-flip{
+            width: 100%;
+            padding: 10px;
+            height: 59vw;
+            @include respond-to-min(1000){
+                width: 50%;
+            }
+            svg{
+                &#cardfront,
+                &#cardback{
+                    box-shadow: 1px 5px 6px 0px #00000059;
+                }
+            }
+            .creditcard{
+                .cardBackground{
+                    //filter: url(#f1);
+                    //opacity: 0.7;
+                    border: 1px solid #fff;
+                }
+                .grey{
+                    fill: #616161;
+                }
+            }
+        }
+        .form-cont{
+            @include respond-to-min(1000){
+                width: 50%;
+            }
+        }
+        .form-cont-btn{
+            padding: 15px 20px;
+            width: calc(100% + 20px);
+            margin-left: -10px;
+            margin-right: -10px;
+            display: flex;
+            justify-content: flex-end;
+            .btn-planos{
+                color: #fff;
+                border: 0;
+                box-shadow: 0px 10px 40px -10px rgba(255,0,131,0.5);
+                transform: translateY(0);
+                border-radius: 40px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-decoration: none;
+                text-transform: uppercase;
+                display: inline-block;
+                position: relative;
+                transition: all 0.2s, transform 0.5s;
+                cursor: pointer;
+                padding: 0 70px;
+                height: 47px;
+                line-height: 47px;
+                &:hover{
+                    background: #b109bf;
+                }
+                svg{
+                    width: 25px;
+                }
+            }
+        }
+        h3{
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            margin: 10px 0 25px;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            /* identical to box height */
+
+
+            /* CTA & Texto */
+
+            color: #202020;
+
+            padding: 15px 20px;
+            width: calc(100% + 20px);
+            margin-left: -10px;
+            margin-right: -10px;
+
+            border-top: 1px solid#e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+            svg{
+                margin-right: 15px;
+                path{
+                    fill: #EB00FF;
+                }
+            }
+        }
+        .form-input{
+            width: 100%;
+            padding: 0 10px 10px;
+            position: relative;
+            .ccicon{
+                height: 20px;
+                bottom: 27px;
+                opacity: 0.6;
+                top: auto;
+                @include respond-to-min(1000){
+                    bottom: 37px;
+                    right: 25px;
+                    width: 40px;
+                }
+            }
+            label{
+                width: 100%;
+                display: block;
+                color: #768994;
+                
+                font-family: 'Lato';
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 13px;
+
+            }
+            input,
+            select{
+                width: 100%;
+                padding: 15px 20px;
+                border: 1px solid #d4d4d4;
+                border-radius: 3px;
+                background: #fff;
+                
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 16px;
+                color: #3C3E48;
+                margin-bottom: 7px;
+
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 19px;
+                /* identical to box height, or 119% */
+                
+                
+                background-color: #fff;
+                color: #111111;
+                border: 1px solid #D3DCE0 !important;
+                padding: 15px 20px;
+                margin: 0;
+                resize: none;
+                height: 47px;
+                border-radius: 40px;
+                transition: border-color 0.1s, color 0.1s, padding 0.1s;
+                &::placeholder{
+                    color: #90A4AF;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: inset 0px 0px 1px 0.5px #EB00FF;
+                    border: 1px solid #EB00FF !important;
+                }
+            }
+            &.form-cep{
+                width: calc(50%);
+                @include respond-to-min(550){
+                    width: 25%;
+                }
+            }
+            &.form-estado{
+                width: calc(50%);
+                @include respond-to-min(550){
+                    width: 25%;
+                }
+            }
+            &.form-cidade{
+                width: calc(50%);
+                @include respond-to-min(550){
+                    width: 25%;
+                }
+            }
+            &.form-bairro{
+                width: calc(50%);
+                @include respond-to-min(550){
+                    width: 25%;
+                }
+            }
+
+            &.form-rua{
+                width: calc(100%);
+                @include respond-to-min(550){
+                    width: 60%;
+                }
+            }
+
+            &.form-numero{
+                width: calc(50%);
+                @include respond-to-min(550){
+                    width: 20%;
+                }
+            }
+            &.form-comp{
+                width: calc(50%);
+                @include respond-to-min(550){
+                    width: 20%;
+                }
+            }
+            &.form-cpf{
+                width: calc(50%);
+            }
+            &.form-celular{
+                width: calc(50%);
+            }
+            &.form-email{
+                width: 100%;
+                @include respond-to-min(550){
+                    width: 50%;
+                }
+            }
+
+            &.form-nome-cartao{
+                width: calc(100%);
+                @include respond-to-min(550){
+                    width: 50%;
+                }
+            }
+            &.form-numero-cartao{
+                width: calc(100%);
+                @include respond-to-min(550){
+                    width: 50%;
+                }
+            }
+            &.form-validade{
+                width: calc(50%);
+            }
+            &.form-cvv{
+                width: calc(50%);
+            }
+        }
+    }
+}
+//========== /Checkout Section

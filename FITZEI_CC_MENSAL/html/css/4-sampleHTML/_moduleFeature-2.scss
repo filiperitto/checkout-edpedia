@@ -1,0 +1,123 @@
+//== Feature Section ::::
+.moduleFeature-2 {
+    background: #fff8f8;
+    z-index: 2;
+    position: relative;
+    @include respond-to-min(750){
+        padding-bottom: 225px;
+    }
+    .union-topo{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .crop-bottom{
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .box-cont{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        @include respond-to-min(750){
+            flex-direction: row;
+        }
+    }
+    .img-box{
+        width: 100%;
+        @include respond-to-min(750){
+            width: 50%;
+            position: relative;
+        }
+        img{
+            width: 100%;
+            @include respond-to-min(750){
+                width: 150%;
+                position: absolute;
+                right: 0;
+                bottom: -170px;
+            }
+            @include respond-to-min(1130){
+            }
+        }
+    }
+    .text-box{
+        width: 100%;
+        order: 1;
+        //margin-bottom: 40px;
+        padding-top: 230px;
+        @include respond-to-min(750){
+            width: 46%;
+            padding: 0 70px;
+            order: 2;
+            margin-bottom: 0;
+            padding-top: 230px;
+        }
+        h1{
+            display: inline-block;
+            margin-top: 0;
+            color: $primary-light;
+            font-family: $font-regular;
+            font-weight: 600;
+            font-size: 30px;
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+
+        }
+        .step-box{
+            width: 100%;
+            height: auto;
+            .title-step{
+                display: flex;
+                img{
+                    margin-right: 10px;
+                    width: 100%;
+                    max-width: 30px;
+                }
+                h3{ 
+                    color: $primary-light;
+                    font-family: $font-regular;
+                    margin: 10px 0px;
+
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 23px;
+                    letter-spacing: 0em;
+                    text-align: left;
+
+                }
+            }
+            p{
+                color: $primary-light;
+                font-family: $font-regular;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 21px;
+                letter-spacing: 0em;
+                text-align: left;
+                
+            }
+        }
+        .btn{
+            width: 100%;
+            margin-bottom: 20px;
+            .border-wrap{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .box-btns{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+//========== /Feature Section

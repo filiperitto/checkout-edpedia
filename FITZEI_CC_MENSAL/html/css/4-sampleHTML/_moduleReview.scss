@@ -1,0 +1,173 @@
+
+.moduleReviews-2 {
+    background: #F4F6FD;
+    position: relative;
+    @include respond-to-min(750){
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    .grid{
+        justify-content: center;
+    }
+    .mask{
+        width: 100%;
+        height: 246px;
+        position: absolute;
+        background: #fff;
+        bottom: 0;
+        left: 0;
+    }
+    .text-box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include respond-to-min(750){
+            width: 30%;
+        }
+        h1{
+            color: #fff;
+            margin-top: 0;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 36px;
+            line-height: 54px;
+            /* or 150% */
+            text-align: center;
+
+
+            color: #343434;
+            @include respond-to-min(750){
+                text-align: left;
+            }
+        }
+        p{
+            color: #fff;
+            font-family: Roboto Condensed;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            letter-spacing: 3px;
+            text-align: left;
+            text-transform: uppercase;
+        }
+        .btn{
+
+        }
+
+    }
+    .slider-box{
+        width: 100%;
+        @include respond-to-min(750){
+            width: 70%;
+        }
+        .item-box{
+            width: auto;
+            background: #343434;
+            padding: 45px;
+            border-radius: 3px;
+            margin-left: 0;
+            margin-right: 20px;
+            @include respond-to-min(750){
+                margin-left: 20px;
+                margin-right: 0;
+            }
+            .header{
+                width: 100%;
+                display: flex;
+                .thumb-wrap{
+                    width: 80px;
+                    height: 80px;
+                    overflow: hidden;
+                    border-radius: 50px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .text-header{
+                    padding-left: 25px;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    margin-bottom: 40px;
+                    h4{
+                        font-family: 'Roboto Condensed';
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 24px;
+                        line-height: 32px;
+                        /* identical to box height, or 133% */
+
+                        text-transform: uppercase;
+
+                        color: #FFFFFF;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    p{
+                        margin: 0;
+                        padding: 0;
+                        font-family: DM Sans;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 28px;
+                        /* identical to box height, or 200% */
+
+
+                        color: #FFFFFF;
+                    }
+
+                }
+            }
+            .content-box{
+                width: 100%;
+                p{
+                    font-family: 'DM Sans';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 32px;
+                    /* or 200% */
+
+
+                    color: rgba(255, 255, 255, 0.502972);
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .box-btn-glider{
+        display: flex;
+        //height: 100%;
+        align-items: flex-end;
+        justify-content: flex-end;
+        @include respond-to-min(750){
+            justify-content: flex-start;
+        }
+        .glider-prev,
+        .glider-next{
+            left: auto;
+            right: auto;
+        }
+        .glider-prev{
+            margin-right: 5px;
+        }
+        &.mob{
+            display: flex;
+            @include respond-to-min(750){
+                display: none;
+            }
+        }
+        &.desk{
+            display: none;
+            margin-top: 20px;
+            @include respond-to-min(750){
+                display: flex;
+            }
+        }
+    }
+}

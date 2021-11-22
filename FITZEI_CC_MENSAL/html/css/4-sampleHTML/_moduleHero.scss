@@ -1,0 +1,141 @@
+//== Hero Section ::::
+
+.moduleHero {
+    width: 100%;
+    height: auto;
+    //float: left;
+    background: transparent;
+    position: relative;
+    z-index: 0;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 100px;
+    @include respond-to-min(750){
+        height: 700px;
+        padding-top: 80px;
+    }
+    @include respond-to-min(1200){
+        height: 766px;
+    }
+    .wrap {
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
+        //flex-direction: column;
+        max-width: 1440px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        @include respond-to-min(750){
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+    .slide-left{
+        width: 25%;
+        height: 100%;
+        position: relative;
+        img{
+            width: auto;
+            height: 100%;
+            position: absolute;
+            right: 0;
+        }
+    }
+    .slide-right{
+        width: 25%;
+        height: 100%;
+        position: relative;
+        img{
+            width: auto;
+            height: 100%;
+            position: absolute;
+            left: 0;
+        }
+    }
+    .text-box{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        @include respond-to-min(750){
+            justify-content: center;
+            width: 50%;
+            align-items: center;
+        }
+        img{
+            width:100%;
+            max-width: 117px;
+            height: auto;
+            margin: 0;
+            margin-bottom: 30px;
+            @include respond-to-min(750){
+                max-width: 195px;
+            }
+        }
+        h1{
+            font-family: DM Sans;
+            font-style: normal;
+            font-weight: normal;
+            margin: 0;
+            margin-bottom: 30px;
+            
+            font-size: 34px;
+            line-height: 34px;
+            /* or 101% */
+            
+            text-align: center;
+            
+            color: #111111;
+            @include respond-to-min(750){
+                font-size: 74px;
+                line-height: 75px;
+            }
+        }
+        h3{
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 0;
+            margin-bottom: 30px;
+            /* or 145% */
+            
+            text-align: center;
+            
+            color: #111111;
+            @include respond-to-min(750){
+                font-size: 20px;
+                line-height: 29px;
+            }
+        }
+        .btn{
+            margin: 0;
+            margin: 10px 0 30px;
+        }
+    }
+    .img-box{
+        width: 100%;
+        z-index: 0;
+        @include respond-to-min(750){
+            display: flex;
+            position: relative;
+            width: 50%;
+        }
+        img{
+            width: 100%;
+            @include respond-to-min(750){
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 170%;
+            }
+        }
+    }
+    
+}
+//========== /Hero Section

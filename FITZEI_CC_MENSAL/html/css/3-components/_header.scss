@@ -1,0 +1,326 @@
+//== Header Section ::::
+header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    padding: 1em 0;
+    z-index: 99;
+    transition: all 300ms ease-in-out;
+    background: #fff;
+    color: #fff;
+
+    .wrap {
+        max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;   
+    }
+
+    .logo-mini {
+        position: relative;
+        margin: 39px auto 0;
+        left: 0px;
+        right: 0;
+        width: 100%;
+        max-width: 40px;
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+        &:hover{
+            transform: scale(1.2);
+        }
+        @include respond-to-min(750){
+            max-width: 80px;
+        }
+        @include respond-to-min(960){
+            position: absolute;
+            margin: 0 auto 0;
+        }
+        img{
+            width: 100%;
+        }
+    }
+
+    nav {
+        width: 90%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background: #fff;
+        transition: all .3s ease-in-out;
+        @include respond-to-min(750){
+            width: auto;
+            height: auto;
+            position: relative;
+            top: auto;
+            right: auto;
+            background: transparent;
+        }
+        ul {
+            width: 100%;
+            height: 100%;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            list-style: none;
+            display: flex;
+            margin: 80px 0 0 0;
+            padding: 0;
+            align-items: baseline;
+
+            @include respond-to-min(750){
+                align-content: space-between;
+                justify-content: center;
+                flex-direction: row;
+                margin: 0;
+            }
+
+            li {
+                width: 100%;
+                @include respond-to-min(750){
+                    width: auto;
+                    padding-right: 40px;
+                }
+                &.active{
+                    a{
+                        color: #EB00FF;
+                    }
+                }
+
+                a {
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 19px;
+                    /* identical to box height, or 136% */
+                    
+                    
+                    color: #111111;
+
+                    display: block;
+                    padding: 15px 0px;
+                    padding-left: 40px;
+                    @include respond-to-min(750){
+                        padding: 0;
+                    }
+                    &:hover{
+                        background-color: rgba($primary-light, 0.1);
+                        @include respond-to-min(750){
+                            background-color: transparent;
+                        }
+                    }
+                }
+                .btn.inverted{
+                    margin-left: 40px;
+                    margin-top: 40px;
+                    @include respond-to-min(750){
+                        margin: 0;
+                    }
+                    .border-wrap{
+                        padding: 12px 40px;
+                        background-color: #fff3f3 ;
+                    }
+                }
+            }
+        }
+    }
+    ul{
+        &.right-menu{
+            width: 100%;
+            height: 100%;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            list-style: none;
+            display: flex;
+            //margin: 80px 0 0 0;
+            padding: 0;
+            align-items: baseline;
+            @include respond-to-min(750){
+                width: auto;
+            }
+            li{
+                margin-left: 25px;
+                a{
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 19px;
+                    /* identical to box height, or 136% */
+                    
+                    
+                    color: #111111;
+                }
+            }
+        }
+    }
+
+    &.fixed-top {
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+        padding: 0.5em 0;
+
+        .logo-mini {
+            margin: 0 auto 0;
+            margin-left: 20px;
+            opacity: 1;
+            @include respond-to-min(960){
+                
+                margin: 0 auto 0;
+            }
+        }
+
+        nav {
+            ul {
+                li {
+                    a {
+                        color: #303030;
+                    }
+                    .btn.inverted .border-wrap{
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        .hamb{
+            span{
+                background: #202020;
+            }
+        }
+    }
+
+    &.open{
+        nav{
+            right: 0;
+        }
+    }
+}
+
+.lead-page{
+    header{
+        border-bottom: 1px solid #ccc;
+        .logo-mini{
+            margin: 0 auto 0;
+            margin-left: 20px;
+            opacity: 1;
+            @include respond-to-min(960){
+                
+                margin: 0 auto 0;
+            }
+        }
+
+        &.fixed-top {
+    
+            .logo-mini {
+                @include respond-to-min(960){
+                    
+                    margin: 0 auto 0;
+                }
+            }
+        }
+    }
+}
+
+.politicas-page{
+    header{
+        border-bottom: 1px solid #ccc;
+        //position: relative;
+        .logo-mini{
+            margin: 0 auto 0;
+            margin-left: 20px;
+            opacity: 1;
+            @include respond-to-min(960){
+                
+                margin: 0 auto 0;
+            }
+        }
+
+        &.fixed-top {
+    
+            .logo-mini {
+                @include respond-to-min(960){
+                    
+                    margin: 0 auto 0;
+                }
+            }
+        }
+    }
+}
+
+.checkout-page{
+    header{
+        border-bottom: 1px solid #ccc;
+        //position: relative;
+        .logo-mini{
+            margin: 0 auto 0;
+            margin-left: 20px;
+            opacity: 1;
+            @include respond-to-min(960){
+                
+                margin: 0 auto 0;
+            }
+        }
+
+        &.fixed-top {
+    
+            .logo-mini {
+                @include respond-to-min(960){
+                    
+                    margin: 0 auto 0;
+                }
+            }
+        }
+    }
+}
+.formularioPage{
+    header{
+        border-bottom: 1px solid #ccc;
+        .logo-mini{
+            margin: 0 auto 0;
+            margin-left: 20px;
+            opacity: 1;
+            @include respond-to-min(960){
+                
+                margin: 0 auto 0;
+            }
+        }
+
+        &.fixed-top {
+    
+            .logo-mini {
+                @include respond-to-min(960){
+                    
+                    margin: 0 auto 0;
+                }
+            }
+        }
+    }
+}
+.verificacao-page{
+    header{
+        border-bottom: 1px solid #ccc;
+        .logo-mini{
+            margin: 0 auto 0;
+            margin-left: 20px;
+            opacity: 1;
+            @include respond-to-min(960){
+                
+                margin: 0 auto 0;
+            }
+        }
+
+        &.fixed-top {
+    
+            .logo-mini {
+                @include respond-to-min(960){
+                    
+                    margin: 0 auto 0;
+                }
+            }
+        }
+    }
+}
+//========== /Header Section

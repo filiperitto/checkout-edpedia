@@ -1,0 +1,652 @@
+//== Faq Section ::::
+.moduleForm-steps {
+    background: #fff;
+    position: relative;
+    min-height: 100vh;
+    padding-top: 40px;
+
+    @include respond-to-max-h(780) {
+        height: auto;
+    }
+
+    @include respond-to-min(750) {
+        padding-top: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .title {
+        width: 100%;
+        height: auto;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 35px;
+        /* or 146% */
+
+        text-align: center;
+
+        color: #111111;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        @include respond-to-min(750) {
+            font-size: 30px;
+            line-height: 36px;
+        }
+
+        @include respond-to-min(1400) {
+            font-size: 38px;
+            line-height: 55px;
+        }
+    }
+
+    .subtitle {
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        /* identical to box height, or 144% */
+
+        text-align: center;
+
+        color: #939FA4;
+        margin-bottom: 60px;
+    }
+
+    form {
+        //background-color: #ffffff;
+        margin: 100px auto;
+        margin: 0px auto;
+        padding: 40px 10px;
+        width: 100%;
+        min-width: 300px;
+
+        @include respond-to-min(750) {
+            padding: 40px;
+        }
+
+        .form-section {
+            width: 100%;
+            margin: 0px auto;
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateX(-10%);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+
+            @include respond-to-min(750) {
+                width: 70%;
+                min-width: 300px;
+    
+            }
+            &.address-section{
+
+                @include respond-to-min(750) {
+                    //width: 100%;
+                }
+        
+            }
+            &.current{
+                position: relative;
+                visibility: visible;
+                opacity: 1;
+                transform: translateX(0);
+                transition: all 0.5s ease-in-out;
+            }
+
+        }
+
+        .form-navigation {
+            transition: all 0.5s ease-in-out;
+        }
+
+        .questionform {
+            height: auto;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+
+            &.plano {
+                flex-flow: row;
+                justify-content: space-around;
+                align-items: initial;
+                flex-wrap: wrap;
+
+                .input-radio {
+                    width: 100%;
+                    max-width: 160px;
+                    height: auto;
+                    border-radius: 10px;
+
+                    @include respond-to-min(750) {
+                        width: 100%;
+                        max-width: 230px;
+
+                    }
+
+                    .link {
+                        &:checked+.option-inner {
+                            background: #FEF5FF;
+                            transition: all 0.1s ease-in-out;
+                            border-color: #EB00FF;
+
+                            .step-box {
+                                icon {
+                                    svg {
+                                        path {
+                                            fill: #EB00FF;
+                                        }
+                                    }
+                                }
+                            }
+
+                            i {
+                                background: #EB00FF;
+                            }
+                        }
+                    }
+
+                    .option-inner {
+                        border-radius: 10px;
+                        background: #fff;
+                        border: 1px solid #D3DCE0;
+                        align-items: baseline;
+                        padding-top: 35px;
+                        padding-bottom: 35px;
+
+                        .step-box {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 0 20px;
+                            padding: 0;
+                            margin-bottom: 0px;
+
+                            //display: none;
+                            icon {
+                                width: 100%;
+                                height: 72px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                svg {
+                                    width: auto;
+                                    height: 72px;
+                                }
+                            }
+
+                            h4 {
+                                width: 230px;
+
+                                margin: 22px 0 10px;
+                                display: flex;
+
+                                font-family: 'Roboto Condensed';
+                                font-style: normal;
+                                font-weight: bold;
+                                font-size: 18px;
+                                line-height: 32px;
+                                /* identical to box height, or 133% */
+
+                                text-transform: uppercase;
+                                justify-content: center;
+
+                                color: #111111;
+
+                                @include respond-to-min(750) {
+                                    font-size: 24px;
+                                }
+                            }
+
+                            p {
+                                margin-bottom: 30px;
+
+                                font-family: 'DM Sans';
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 14px;
+                                line-height: 22px;
+                                /* or 200% */
+
+
+                                color: rgba(17, 17, 17, 0.50133);
+                                margin-bottom: 0;
+
+                                text-align: center;
+
+                                @include respond-to-min(750) {
+                                    font-size: 16px;
+                                    line-height: 32px;
+                                }
+                            }
+                        }
+
+                        i {
+                            position: absolute;
+                            top: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .question-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            &.mini-radio {
+                justify-content: center;
+
+                h3 {
+                    width: 100%;
+                    font-family: 'DM Sans';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 35px;
+                    /* identical to box height, or 194% */
+
+                    text-align: center;
+
+                    color: #111111;
+                }
+
+                .input-radio {
+                    width: 100%;
+                    margin: 0 8px 16px 8px;
+
+                    @include respond-to-min(750) {
+                        max-width: 220px;
+                    }
+
+                    input[type=radio] {}
+                }
+            }
+
+            &.endereco-edit {
+                justify-content: space-between;
+
+                .cep {
+                    @include respond-to-min(750) {
+                        width: 25%;
+                    }
+                }
+
+                .endereco {
+                    @include respond-to-min(750) {
+                        width: 72%;
+                    }
+                }
+
+                .numero,
+                .complemento,
+                .cidade,
+                .estado,
+                .bairro {
+                    @include respond-to-min(750) {
+                        width: 18%;
+                    }
+                }
+            }
+            &.displayNone{
+                display: none;
+            }
+        }
+        .itemFamiliar{
+            padding-top: 25px;
+            padding-bottom: 25px;
+            border-top: 1px solid #e6e6e6;
+            &:first-child{
+                border-top:0;
+            }
+        }
+        .fix-buttons{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            .btn{
+                margin: 0 7px;
+                &:hover{
+                    background: #b109bf;
+                    color: #fff;
+                    border-color: #b109bf;
+                }
+                &:focus{
+                    box-shadow: 0 0 0 0.2rem rgba(235, 0, 255,0.25);
+                }
+            }
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=password],
+        input[type=tel],
+        input[type=date] {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            /* identical to box height, or 119% */
+
+
+            background-color: #fff;
+            color: #111111;
+            border: 1px solid #D3DCE0;
+            padding: 15px 20px;
+            margin: 0;
+            resize: none;
+            height: 47px;
+            border-radius: 40px;
+            //transition: border-color 0.1s, color 0.1s, padding 0.1s;
+
+            &:focus {
+                border-color: #EB00FF;
+                box-shadow: 0 0 0 1px #EB00FF inset;
+                outline: 0;
+            }
+        }
+
+        .input-radio {
+            width: 200px;
+            overflow: hidden;
+            display: inline-block;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+            transition: border-color 0.1s;
+            border-radius: 40px;
+
+
+            margin: 0 0 16px 0;
+            width: 320px;
+            height: 47px;
+            border: 1px solid #F7F7F7;
+            vertical-align: text-bottom;
+
+
+            &:hover {
+                border: 1px solid #F7F7F7;
+
+                .option-inner {
+                    h5 {
+                    }
+
+                    i {
+                        box-shadow: 0 0 0 1px #B7B7B7;
+                    }
+
+                }
+            }
+
+            input[type=radio] {
+                position: absolute;
+                opacity: 0;
+                top: -20px;
+                left: -20px;
+                //transition: all 0.1s ease-in-out;
+
+                &:checked+.option-inner {
+                    background: #FBEBFD;
+                    //transition: all 0.1s ease-in-out;
+
+                    i {
+                        background: #EB00FF;
+                    }
+                }
+            }
+
+            .option-inner {
+                background: #fff;
+                width: 100%;
+                height: 100%;
+                padding-top: 20px;
+                padding-bottom: 10px;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: space-around;
+                background: #F4F6FD;
+
+                border-radius: 40px;
+
+
+                padding: 15px;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: flex-end;
+                //transition: all 0.1s ease-in-out;
+
+                h5 {
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 19px;
+                    /* identical to box height, or 119% */
+
+
+                    /* Texto inativo */
+
+                    color: #727272;
+                    padding-bottom: 15px;
+                    //text-transform: uppercase;
+
+                    text-align: left;
+                    margin: 0;
+                    padding: 0 10px 0 10px;
+                }
+
+                i {
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    border: 15px #fff solid;
+                    background: #fff;
+                    box-shadow: 0 0 0 1px #DADADA;
+                    border-radius: 50%;
+                    transition: border-width 0.1s, box-shadow 0.1s;
+
+                    border-width: 5px;
+
+                    box-shadow: 0 0 0 1px #ECECEC;
+
+                    flex-shrink: 0;
+
+                }
+
+            }
+        }
+
+        .input-container {
+            width: 100%;
+            margin-bottom: 10px;
+
+            @include respond-to-min(750) {
+                width: 47%;
+                margin-bottom: 16px;
+            }
+
+            position: relative;
+            display: inline-block;
+
+            label {
+                font-family: Roboto;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 19px;
+                /* identical to box height, or 119% */
+
+
+                /* Texto inativo */
+
+                color: #727272;
+
+                position: absolute;
+                top: 2px;
+                left: 22px;
+                transition: all 0.15s ease-out;
+                user-select: none;
+                transform-origin: 0 100%;
+                transform: translateY(12px);
+                will-change: transform;
+                cursor: text;
+            }
+
+            input[type=text],
+            input[type=email],
+            input[type=password],
+            input[type=tel],
+            input[type=date] {
+                width: 100%;
+                &.is-invalid{
+                    border-color: rgb(220, 53, 69);
+                    box-shadow: 0 0 0 1px rgb(220, 53, 69) inset;
+                }
+            }
+
+            .parsley-errors-list {
+                li {
+                    padding: 5px 15px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 11px;
+                    /* line-height: 19px; */
+                    color: #727272;
+
+                    &:before {
+                        content: '*';
+                        color: #f74646;
+                        font-weight: bold;
+                        margin-right: 6px;
+                    }
+                }
+            }
+            .invalid-feedback{
+                text-align: center;
+            }
+        }
+
+        .input-checkbox {
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            left: 0;
+            bottom: -200px;
+
+            p {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 21px;
+                /* identical to box height, or 150% */
+
+
+                color: #111111;
+
+                a {
+                    color: #EB00FF;
+                }
+            }
+        }
+
+
+        .submit-wrap {
+            text-align: center;
+            width: 100%;
+            transition: top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-top: 45px;
+
+            .btn {
+                color: #fff;
+                border: 0;
+                box-shadow: 0px 10px 40px -10px rgba(255, 0, 131, 0.5);
+                transform: translateY(0);
+                border-radius: 40px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-decoration: none;
+                text-transform: uppercase;
+                display: inline-block;
+                position: relative;
+                transition: all 0.2s, transform 0.5s;
+                cursor: pointer;
+                padding: 0 70px;
+                height: 47px;
+                line-height: 47px;
+
+                &:hover {
+                    background: #b109bf;
+                }
+            }
+
+            .arrow {
+                position: absolute;
+                top: 83px;
+                left: 0;
+                cursor: pointer;
+                &:hover{
+                    svg{
+                        path{
+                            stroke: #cecece;
+                        }
+                    }
+                }
+                &:focus{
+                    outline: 0;
+                }
+            }
+
+            .disabled {
+                .btn {
+                    background: #C5CBDE;
+                    box-shadow: 0px 10px 40px -10px rgba(#C5CBDE, 0.5);
+                    cursor: default;
+                }
+
+                &.active {
+                    .btn {
+                        background: #EB00FF;
+                        box-shadow: 0px 10px 40px -10px rgba(255, 0, 131, 0.5);
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #b109bf;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btn {
+            margin-top: 30px;
+        }
+    }
+}
+
+//========== /Faq Section

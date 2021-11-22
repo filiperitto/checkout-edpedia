@@ -1,0 +1,52 @@
+
+//== Faq Section ::::
+.moduleForm-steps {
+    &.login{
+        display: flex;
+        align-items: center;
+        form{
+    
+            .logo-mini {
+                //position: absolute;
+                margin: 0 auto 40px;
+                left: 0px;
+                right: 0;
+                width: 100%;
+                max-width: 40px;
+                display: block;
+                //opacity: 0;
+                @include respond-to-min(750){
+                    max-width: 200px;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+            .submit-wrap{
+                margin-top: 15px;
+                p{
+                    position: relative;
+                    margin-top: 20px;
+                    z-index: 3;
+                    a{
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 21px;
+                        /* identical to box height, or 150% */
+                        
+                        
+                        color: #EB00FF;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//========== /Faq Section
+
+

@@ -1,0 +1,14 @@
+.moduleClients{
+    width: 100%;
+    height: auto;
+    .img-wraps{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 100%;
+            max-width: 709px;
+        }
+    }
+}
