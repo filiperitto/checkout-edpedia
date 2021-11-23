@@ -63,7 +63,7 @@
         margin-top: 48px;
         padding-right: 0;
 
-        @include respond-to-min(750) {
+        @include respond-to-min(1010) {
             width: 50%;
             margin-top: 64px;
             padding-right: 35px;
@@ -101,7 +101,7 @@
                 background: #2C2C35;
                 display: flex;
                 flex-wrap: wrap;
-                padding: 40px 24px 34px;
+                padding: 40px 8px 34px 24px;
                 justify-content: space-between;
                 border-radius: 0px 16px 16px 16px;
                 margin-top: 5px;
@@ -126,14 +126,13 @@
                     padding-bottom: 16px;
                     position: relative;
 
-                    @include respond-to-min(750) {
+                    @include respond-to-min(570) {
                         width: 50%;
                     }
 
                     label {
                         display: none;
                     }
-
                     small {
                         width: 100%;
                         text-align: right;
@@ -150,8 +149,38 @@
                         right: auto;
                         left: 0;
                     }
+
+                    &.form-numero,
+                    &.form-comp,
+                    &.form-validade{
+                        width: 50%;
+                    }
+
+                    &.form-numero,
+                    &.form-comp,
+                    &.form-bairro,
+                    &.form-validade,
+                    &.form-cvv{
+                        @include respond-to-min(570) {
+                            width: 33.3%;
+                        }
+                    }
+
+                    &.form-estado{
+                        width: 50%;
+                        @include respond-to-min(570) {
+                            width: 17%;
+                        }
+                    }
+                    &.form-cidade{
+                        width: 50%;
+                        @include respond-to-min(570) {
+                            width: 33%;
+                        }
+                    }
                 }
                 .form-checkbox{
+                    width: 100%;
                     label{
                         margin: 20px 0 5px;
                         display: inline-block;
@@ -185,7 +214,7 @@
         width: 100%;
         padding-left: 0;
 
-        @include respond-to-min(750) {
+        @include respond-to-min(1010) {
             width: 50%;
             padding-left: 35px;
         }

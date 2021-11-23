@@ -59,57 +59,104 @@
                     <input type='hidden' name='page' value='assinar_cc'>
                     <input type='hidden' name='origem' value='##ORIGEM##'>
                     <input type='hidden' name='id_tipo_assinatura' value='##ID_TIPO_ASSINATURA##'>
-                    <input type="hidden" name="pgCheckout" value="home" />
+                    <input type="hidden" name="pgCheckout" value="pagamento" />
                     <input type="hidden" name="pgObrigado" value="obrigado" />
-                    <input type='hidden' name='tipo' value='iugu'>
-                    <input type='hidden' name='tokenIugu' id="tokenIugu" value=''>
+                    <input type="hidden" name="exp_c" id="exp_c"/>
 
                     <div class="card card-section">
                         <div class="title-box">
                             <img alt="info pessoal" src="imgs/Grupo_993.png">
                             <h3>Informações Pessoais</h3>
                         </div>
-                        <div class="erro">##MSG_ERRO##</div>
+                        <div class="erro" style="color: #e74c3c;">##MSG_ERRO##</div>
                         <div class="form-wrap">
                             <div class="form-input form-nome">
                                 <label for="first-name">Nome Completo</label>
-                                <input name="first-name" type="text" id="first-name" size="2" placeholder="Nome Completo">
+                                <input type="text" class="form-control input-validation" name="nome" id="nome" aria-describedby="nome" placeholder="Nome Completo">
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
                             </div>
                             <div class="form-input form-cpf">
                                 <label for="cpf">CPF / CNPJ</label>
-                                <input name="cpf" id="cpf" maxlength="15" type="text" placeholder="CPF / CNPJ" required >
+                                <input type="text" class="form-control input-validation" name="cpf" id="cpf" aria-describedby="cpf    " placeholder="CPF / CNPJ">
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
                             </div>
                             <div class="form-input form-cep">
                                 <label for="cep">CEP (Busca de Endereços)</label>
-                                <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" placeholder="CEP (Busca de Endereços)">
+                                <input type="text" class="form-control input-validation" name="cep" id="cep" aria-describedby="cep" placeholder="CEP (Busca de Endereço)">
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
                             </div>
                             <div class="form-input form-celular">
                                 <label for="telefone">Celular</label>
-                                <input id="telefone" name="telefone" placeholder="Celular"
-                                maxlength="11" type="text">
+                                <input type="text" class="form-control input-validation" name="telefone" id="telefone" aria-describedby="telefone" placeholder="Celular">
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
                             </div>
+                            
+
+                            <div class="form-input form-estado">
+                                <label for="uf">Estado*</label>
+                                
+                                <input type="text" class="form-control input-validation" name="uf" id="uf" aria-describedby="uf" placeholder="UF">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-cidade">
+                                <label for="cidade">Cidade*</label>
+                                <input type="text" class="form-control input-validation" name="cidade" id="localidade" aria-describedby="localidade" placeholder="Cidade">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-rua">
+                                <label for="rua">Rua*</label>
+                                <input type="text" class="form-control input-validation" name="rua" id="logradouro" aria-describedby="logradouro" placeholder="logradouro">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+
+                            <div class="form-input form-numero">
+                                <label for="numero">Numero*</label>
+                                <input type="text" class="form-control input-validation" name="numero" id="numero" aria-describedby="numero" placeholder="Número">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-comp">
+                                <label for="complemento">Complemento</label>
+                                <input type="text" class="form-control input-validation" name="complementoEndereco" id="complementoEndereco" aria-describedby="complementoEndereco" placeholder="Complemento">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+                            <div class="form-input form-bairro">
+                                <label for="bairro">Bairro*</label>
+                                <input type="text" class="form-control input-validation" name="bairro" id="bairro" aria-describedby="bairro" placeholder="Bairro">
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
+                            </div>
+
+
                             <div class="form-input form-email">
                                 <label for="email">E-mail</label>
-                                <input id="email" name="email" maxlength="50" type="text" placeholder="E-mail">
+                                
+                                <input type="text" class="form-control input-validation" name="email" id="email" aria-describedby="email" placeholder="E-mail">
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
                             </div>
                             <div class="form-input form-email">
                                 <label for="email-confirm">Confirme seu email</label>
-                                <input id="email-confirm" name="email-confirm" maxlength="50" type="text" placeholder="Confirme seu e-mail">
+                                <input type="text" class="form-control input-validation" name="email-confirm" id="email-confirm" aria-describedby="email-confirm" placeholder="Confirme seu e-mail">
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
@@ -125,50 +172,71 @@
                         </div>
                         <div class="form-wrap">
                             <div class="form-input form-numero-cartao">
-                                <label for="number_c">Número do Cartão*</label>
-                                <span id="generatecard"
-                                style="display:none">generate random</span>
-                                <input name="number_c" id="number_c" type="text" placeholder="Somente números">
+                                <input type="text" class="form-control input-validation" name="number_c" id="number_c" aria-describedby="numero-cartao" placeholder="Número do Cartão">
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
                             </div>
                             <div class="form-input form-nome-cartao">
-                                <label for="holdername_c">Titular do Cartão*</label>
-                                <input onkeyup="value=value.replace(/[^a-zA-Z	 ]/g,'')" name="holdername_c"
-                                id="holdername_c" maxlength="20" type="text" required placeholder="Nome impresso no cartão">
+                                <input type="text" class="form-control input-validation" name="holdername_c" id="holdername_c" aria-describedby="holdername_c" placeholder="Nome do Títular do Cartão">
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
                             </div>
                             <div class="form-input form-validade">
-                                <label for="exp_c">MM</label>
-                                <input id="exp_c" name="exp_c" type="text" placeholder="MM/AA">
+                                <select class="custom-select input-validation" name="exp_cm" id="exp_cm">
+                                    <option value="MM" selected disabled>MM</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
                             </div>
                             <div class="form-input form-validade">
-                                <label for="exp_c">AA</label>
-                                <input id="exp_c" name="exp_c" type="text" placeholder="MM/AA">
+                                <select class="custom-select input-validation" name="exp_ca" id="exp_ca">
+                                    <option value="AA" selected disabled>AA</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                    <option value="2031">2031</option>
+                                    <option value="2032">2032</option>
+                                </select>
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
                             </div>
                             <div class="form-input form-cvv">
-                                <label for="cvv_c">Cód. de Segurança</label>
-                                <input id="cvv_c" name="cvv_c" type="text" placeholder="3 ou 4 dígitos">
+                                <input type="text" class="form-control input-validation" name="cvv_c" id="cvv_c" aria-describedby="cvv" placeholder="Código de segurança">
                                 <i class="fas fa-check-circle"></i>
                                 <i class="fas fa-exclamation-circle"></i>
                                 <small class="error">Error Message</small>
                             </div>
 
                             <div class="form-input form-parcelas">
-                                <label>Valor Mensal</label>
-                                <select id="installments" name="installments">
+                                <select class="custom-select input-validation" name="installments" id="installments" aria-describedby="installments" required="required">
                                     ##PARCELAS##
                                 </select>
-                                </input>
+                                <i class="fas fa-check-circle"></i>
+                                <i class="fas fa-exclamation-circle"></i>
+                                <small class="error">Error Message</small>
                             </div>
 
                             <div class="form-checkbox termos">
@@ -181,7 +249,7 @@
 
                             <div class="termos">
                                 
-                                <label class="link-terms" for="terms">Ao fazer seu pedido, você concorda com a política de privacidade e os termos de uso do Dayan. Você receberá as últimas atualizações do curso e notícias do Dayan.</label>
+                                <label class="link-terms" for="terms">Ao fazer seu pedido, você concorda com a política de privacidade e os <a href="?page=navega&pg=termos">termos de uso do Edpedia</a>. Você receberá as últimas atualizações do curso e notícias do Dayan.</label>
                                 
                             </div>
                         </div>
@@ -277,12 +345,9 @@
         }
         
     </script>
-    <script src="js/card.js"></script>
-    <script src="js/card_imask.min.js"></script>
-    <script src="js/jquery.maskedinput-1.1.4.pack.js" type="text/javascript"></script>
-    <script src="js/vendor/jquery.mask.min.js"></script>
 
-    <script src="js/main-0.1.1.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/pagamento05.js"></script>
 
 </body>
 

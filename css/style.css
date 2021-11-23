@@ -940,7 +940,8 @@ button {
   outline: none;
 }
 
-form input[type=text] {
+form input[type=text],
+form select {
   width: 100%;
   font-family: "Work Sans", sans-serif;
   background: #FFFFFF0D 0% 0% no-repeat padding-box;
@@ -950,6 +951,14 @@ form input[type=text] {
   opacity: 1;
   padding: 15px 16px;
   color: #fff;
+}
+
+form select {
+  color: #a7a7a7;
+  background: #FFFFFF0D url(../imgs/Grupo_976.svg) no-repeat right 0.75rem center/8px 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 header {
@@ -1150,7 +1159,7 @@ footer p a {
   padding-right: 0;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1010px) {
   .moduleContent .form-content {
     width: 50%;
     margin-top: 64px;
@@ -1202,7 +1211,7 @@ footer p a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 40px 24px 34px;
+  padding: 40px 8px 34px 24px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1232,7 +1241,7 @@ footer p a {
   position: relative;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 570px) {
   .moduleContent .form-content .card-section .form-wrap .form-input {
     width: 50%;
   }
@@ -1257,6 +1266,40 @@ footer p a {
   padding-right: 16px;
   right: auto;
   left: 0;
+}
+
+.moduleContent .form-content .card-section .form-wrap .form-input.form-numero, .moduleContent .form-content .card-section .form-wrap .form-input.form-comp, .moduleContent .form-content .card-section .form-wrap .form-input.form-validade {
+  width: 50%;
+}
+
+@media only screen and (min-width: 570px) {
+  .moduleContent .form-content .card-section .form-wrap .form-input.form-numero, .moduleContent .form-content .card-section .form-wrap .form-input.form-comp, .moduleContent .form-content .card-section .form-wrap .form-input.form-bairro, .moduleContent .form-content .card-section .form-wrap .form-input.form-validade, .moduleContent .form-content .card-section .form-wrap .form-input.form-cvv {
+    width: 33.3%;
+  }
+}
+
+.moduleContent .form-content .card-section .form-wrap .form-input.form-estado {
+  width: 50%;
+}
+
+@media only screen and (min-width: 570px) {
+  .moduleContent .form-content .card-section .form-wrap .form-input.form-estado {
+    width: 17%;
+  }
+}
+
+.moduleContent .form-content .card-section .form-wrap .form-input.form-cidade {
+  width: 50%;
+}
+
+@media only screen and (min-width: 570px) {
+  .moduleContent .form-content .card-section .form-wrap .form-input.form-cidade {
+    width: 33%;
+  }
+}
+
+.moduleContent .form-content .card-section .form-wrap .form-checkbox {
+  width: 100%;
 }
 
 .moduleContent .form-content .card-section .form-wrap .form-checkbox label {
@@ -1290,7 +1333,7 @@ footer p a {
   padding-left: 0;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 1010px) {
   .moduleContent .order-box {
     width: 50%;
     padding-left: 35px;

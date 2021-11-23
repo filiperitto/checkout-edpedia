@@ -1,5 +1,6 @@
 form{
-    input[type=text]{
+    input[type=text],
+    select{
         width: 100%;
         font-family: $font-regular;
         background: #FFFFFF0D 0% 0% no-repeat padding-box;
@@ -9,5 +10,10 @@ form{
         opacity: 1;
         padding: 15px 16px;
         color: #fff;
+    }
+    select{
+        color: #a7a7a7;
+        background: #FFFFFF0D url(../imgs/Grupo_976.svg) no-repeat right .75rem center/8px 10px;
+        appearance: none;
     }
 }

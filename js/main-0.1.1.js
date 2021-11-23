@@ -1,171 +1,61 @@
-//-== Header fixed on top animation
-// (function () {
-
-//     var headerScroll = getId('header-main'),
-//         scrollHeight = 10,
-//         classHeader = 'active';
-
-//     //SCROLL
-//     window.addEventListener("scroll", scrollOn);
-
-//     function scrollOn() {
-//         animatedScroll(headerScroll, classHeader, scrollHeight);
-//     }
-
-//     //Função que on scroll muda o comportamento do elemento
-//     function animatedScroll(element, classN, height) {
-//         y = pageYOffset; //resgata do objeto window o valor pageYOffset e guarda na variável
-//         if (y > height) {
-//             element.className = classN;
-//         } else {
-//             element.className = '';
-//         }
-//     }
-
-//     // Função toggle adiciona ou tira a class do elemento
-//     function toggle(element, classe) {
-//         element.className = element.className ? '' : classe;
-//     }
-
-//     //Função que retorna o id do elemento
-//     function getId(id) {
-//         return document.getElementById(id);
-//     }
-
-
-// })();
-//------------------------ Header
-
-
-
-//-== HamburgerMenu Toggle
-// (function(){
-//     function hamburgueToggle() {
-//         document.getElementById('hamb').classList.toggle('open');
-//         document.getElementById('header-main').classList.toggle('open');
-//     }
-    
-//     // Select all the elements with example class.
-//     var hambComponent = document.querySelectorAll('.hamb');
-//     var itemNavComponent = document.querySelectorAll('.itemNav');
-    
-//     // Loop through the elements.
-//     for (var i = 0; i < hambComponent.length; i++) {
-//         hambComponent[i].addEventListener('click', hamburgueToggle);
-//     }
-//     for (var i = 0; i < itemNavComponent.length; i++) {
-//         itemNavComponent[i].addEventListener('click', hamburgueToggle);
-//     }
-// })();
-//======================== /HamburgerMenu Toggle
-
-
-//== Anchor Scrollsmooth
-// Vanilla JavaScript Scroll to Anchor @ https://perishablepress.com/vanilla-javascript-scroll-anchor/
-// (function() {
-    
-//     function scrollTo() {
-//         const links = document.querySelectorAll('.menu-item a');
-//         links.forEach(each => (each.onclick = scrollAnchors));
-//     }
-
-//     function scrollAnchors(e, respond = null) {
-//         const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
-//         e.preventDefault();
-//         var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
-//         const targetAnchor = document.querySelector(targetID);
-//         if (!targetAnchor) return;
-//         const originalTop = distanceToTop(targetAnchor);
-//         window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
-//         const checkIfDone = setInterval(function() {
-//             const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-//             if (distanceToTop(targetAnchor) === 0 || atBottom) {
-//                 targetAnchor.tabIndex = '-1';
-//                 targetAnchor.focus();
-//                 window.history.pushState('', '', targetID);
-//                 clearInterval(checkIfDone);
-//             }
-//         }, 150);
-//     }
-
-// 	scrollTo();
-// })();
-
-//======================== /Anchor Scrollsmooth
-
-
-//-== NewsletterModal Toggle
-// (function(){
-//     function modalToggle() {
-//         document.getElementById('form-sticker').classList.toggle('in');
-//         document.getElementById('modal-backdrop').classList.toggle('in');
-//         document.getElementById('modal-backdrop-btn').classList.toggle('in');
-//         document.getElementById('body').classList.toggle('in');
-//     }
-    
-//     // Select all the elements with example class.
-//     var btnModal = document.querySelectorAll('.btn-modal');
-//     var backdropBtn = document.querySelectorAll('.modal-bta');
-    
-//     // Loop through the elements.
-//     for (var i = 0; i < btnModal.length; i++) {
-//         btnModal[i].addEventListener('click', modalToggle);
-//     }
-//     for (var i = 0; i < backdropBtn.length; i++) {
-//         backdropBtn[i].addEventListener('click', modalToggle);
-//     }
-// })();
-//======================== /NewsletterModal Toggle
-
 var CpfCnpjMaskBehavior = function (val) {
-    return val.replace(/\D/g, '').length <= 11 ? '000.000.000-009' : '00.000.000/0000-00';
+  return val.replace(/\D/g, '').length <= 11 ? '000.000.000-009' : '00.000.000/0000-00';
 },
 cpfCnpjpOptions = {
 onKeyPress: function(val, e, field, options) {
-  field.mask(CpfCnpjMaskBehavior.apply({}, arguments), options);
+field.mask(CpfCnpjMaskBehavior.apply({}, arguments), options);
 }
 };
 
 $(document).ready(function() {
+  $("#nome").blur(function(){marcaEvento('#nome','pagamento','preenchimento')});
+  $("#cpf").blur(function(){marcaEvento('#cpf','pagamento','preenchimento')});
+  $("#cep").blur(function(){marcaEvento('#cep','pagamento','preenchimento')});
+  $("#email").blur(function(){marcaEvento('#email','pagamento','preenchimento')});
+  $("#email-confirm").blur(function(){marcaEvento('#email-confirm','pagamento','preenchimento')});
+  $("#uf").blur(function(){marcaEvento('#uf','pagamento','preenchimento')});
+  $("#localidade").blur(function(){marcaEvento('#localidade','pagamento','preenchimento')});
+  $("#bairro").blur(function(){marcaEvento('#bairro','pagamento','preenchimento')});
+  $("#logradouro").blur(function(){marcaEvento('#logradouro','pagamento','preenchimento')});
+  $("#telefone").blur(function(){marcaEvento('#telefone','pagamento','preenchimento')});
+  $("#number_c").blur(function(){marcaEvento('#number_c','pagamento','preenchimento')});
+  $("#holdername_c").blur(function(){marcaEvento('#holdername_c','pagamento','preenchimento')});
+  $("#cvv_c").blur(function(){marcaEvento('#cvv_c','pagamento','preenchimento')});
+  $("#complementoEndereco").blur(function(){marcaEvento('#complementoEndereco','pagamento','preenchimento')});
+  $("#exp_cm").blur(function(){marcaEvento('#exp_cm','pagamento','preenchimento')});
+  $("#exp_ca").blur(function(){marcaEvento('#exp_ca','pagamento','preenchimento')});
+  $("#installments").blur(function(){marcaEvento('#installments','pagamento','preenchimento')});
+  $("#numero").blur(function(){marcaEvento('#numero','pagamento','preenchimento')});
 
-    $("#first-name").blur(function(){marcaEvento('#first-name','pagamento','preenchimento')});
-    $("#last-name").blur(function(){marcaEvento('#last-name','pagamento','preenchimento')});
-    $("#numero").blur(function(){marcaEvento('#numero','pagamento','preenchimento')});
-    $("#complementoEndereco").blur(function(){marcaEvento('#complementoEndereco','pagamento','preenchimento')});
-    $("#cpf").blur(function(){marcaEvento('#cpf','pagamento','preenchimento')});
-    $("#email").blur(function(){marcaEvento('#email','pagamento','preenchimento')});
-    $("#email-confirm").blur(function(){marcaEvento('#email-confirm','pagamento','preenchimento')});
-    $("#cep").blur(function(){marcaEvento('#cep','pagamento','preenchimento')});
-    $("#uf").blur(function(){marcaEvento('#uf','pagamento','preenchimento')});
-    $("#localidade").blur(function(){marcaEvento('#localidade','pagamento','preenchimento')});
-    $("#bairro").blur(function(){marcaEvento('#bairro','pagamento','preenchimento')});
-    $("#logradouro").blur(function(){marcaEvento('#logradouro','pagamento','preenchimento')});
-    $("#telefone").blur(function(){marcaEvento('#telefone','pagamento','preenchimento')});
-    $("#holdername_c").blur(function(){marcaEvento('#holdername_c','pagamento','preenchimento')});
-    $("#number_c").blur(function(){marcaEvento('#number_c','pagamento','preenchimento')});
-    $("#exp_c").blur(function(){marcaEvento('#exp_c','pagamento','preenchimento')});  
-    $("#cvv_c").blur(function(){marcaEvento('#cvv_c','pagamento','preenchimento')});
-    $("#installments").blur(function(){marcaEvento('#installments','pagamento','preenchimento')});
-
-    $("#cpf").mask(CpfCnpjMaskBehavior, cpfCnpjpOptions);
-    $("#cep").mask("00000-000");
-    $("#telefone").mask("(00) 00000-0000");
-    $("#number_c").mask("0000 0000 0000 0000");
-    $("#exp_c").mask("00/00");
-    $("#cvv_c").mask("000")
+  $("#cpf").mask(CpfCnpjMaskBehavior, cpfCnpjpOptions);
+  $("#cep").mask("00000-000");
+  $("#telefone").mask("(00) 00000-0000");
+  $("#number_c").mask("0000 0000 0000 0000");
+  $("#cvv_c").mask("000");
+ 
 });
 
-function preencherName(event) {
-  $('[name=name_]').val($('#first-name').val()+' '+$('#last-name').val());
+function preencherExpC(event) {
+  $('[name=exp_c]').val($('#exp_cm').val()+'/'+$('#exp_ca').val());
 }
 
-$("#first-name").on('input', preencherName);
-$("#last-name").on('input', preencherName);
+$("#exp_cm").on('change', preencherExpC);
+$("#exp_ca").on('change', preencherExpC);
+
+var min = 12;
+var max = 95;
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+$("#qtdPessoas").html(getRandomInt(12,95));
 
 const btnSubmit = document.querySelector("#btn-submit");
 const formSubmit = document.querySelector("#checkout");
-const firstName = document.querySelector("#first-name");
-const lastName = document.querySelector("#last-name");
+const fullName = document.querySelector("#nome");
 const cpf = document.querySelector("#cpf");
 const cep = document.querySelector("#cep");
 const address = document.querySelector("#logradouro");
@@ -180,10 +70,8 @@ const emailConfirm = document.querySelector("#email-confirm");
 const codigoSeguranca = document.querySelector("#cvv_c");
 const numeroC = document.querySelector("#number_c");
 const nomeC = document.querySelector("#holdername_c");
-const expC = document.querySelector("#exp_c");
-// const expCM = document.querySelector("#exp_cm");
-// const expCA = document.querySelector("#exp_ca");
-const terms = document.querySelector("#terms");
+const expCM = document.querySelector("#exp_cm");
+const expCA = document.querySelector("#exp_ca");
 
 async function getCEP(cepValue) {
   const options = {
@@ -204,12 +92,12 @@ async function getCEP(cepValue) {
   }
 };
 
-firstName.addEventListener("input", () => {
-  inputFNameCheck();
+fullName.addEventListener("input", () => {
+  inputNameCheck();
 });
 
-firstName.addEventListener("blur", () => {
-  inputFNameCheck();
+fullName.addEventListener("blur", () => {
+  inputNameCheck();
 });
 
 cpf.addEventListener("input", () => {
@@ -226,6 +114,46 @@ cep.addEventListener("input", e => {
 
 cep.addEventListener("blur", e => {
   inputCepCheck();
+});
+
+address.addEventListener("input", () => {
+  inputAddressCheck();
+});
+
+address.addEventListener("blur", () => {
+  inputAddressCheck();
+});
+
+numberAddress.addEventListener("input", () => {
+  inputNumberAddressCheck();
+});
+
+numberAddress.addEventListener("blur", () => {
+  inputNumberAddressCheck();
+});
+
+bairro.addEventListener("input", () => {
+  inputBairroCheck();
+});
+
+bairro.addEventListener("blur", () => {
+  inputBairroCheck();
+});
+
+uf.addEventListener("input", () => {
+  inputUfCheck();
+});
+
+uf.addEventListener("blur", () => {
+  inputUfCheck();
+});
+
+city.addEventListener("input", () => {
+  inputCityCheck();
+});
+
+city.addEventListener("blur", () => {
+  inputCityCheck();
 });
 
 phone.addEventListener("input", () => {
@@ -262,27 +190,19 @@ numeroC.addEventListener("blur", () => {
 
 nomeC.addEventListener("input", () => {
   inputNameCardCheck();
-});
+})
 
 nomeC.addEventListener("blur", () => {
   inputNameCardCheck();
+})
+
+expCM.addEventListener("change", () => {
+  selectMonthCardCehck();
 });
 
-expC.addEventListener("input", () => {
-  inputExpCCheck();
+expCA.addEventListener("change", () => {
+  selectYearCardCheck();
 });
-
-expC.addEventListener("blur", () => {
-  inputExpCCheck();
-});
-
-// expCM.addEventListener("change", () => {
-//   selectMonthCardCehck();
-// });
-
-// expCA.addEventListener("change", () => {
-//   selectYearCardCheck();
-// });
 
 codigoSeguranca.addEventListener("input", () => {
   inputSecurityCodeCheck();
@@ -292,55 +212,56 @@ codigoSeguranca.addEventListener("blur", () => {
   inputSecurityCodeCheck();
 });
 
-function inputFNameCheck() {
-  const firstNameValue = firstName.value.trim();
+function inputNameCheck() {
+  const fullNameValue = fullName.value.trim();
   const re = /^[A-Za-záàâãéèêíïóôõöüúçñÁÀÂÃÉÈÍÏÓÔÕÖÜÚÇÑ ]+$/;
 
-  if (firstNameValue === "" || firstNameValue === null || firstNameValue === undefined) {
-      setErrorFor(firstName, "Este campo é requerido");
+  if (fullNameValue === "" || fullNameValue === null || fullNameValue === undefined) {
+      setErrorFor(fullName, "Este campo é requerido");
       return false;
   }
 
-  if (firstNameValue.length < 3) {
-      setErrorFor(firstName, "Este campo precisa ter pelo menos 3 caracteres");
+  if (fullNameValue.length < 3) {
+      setErrorFor(fullName, "Este campo precisa ter pelo menos 3 caracteres");
       return false;
   }
 
-  if(!re.test(firstNameValue)) {
-      setErrorFor(firstName, "Este campo não aceita número e nem caracteres especiais");
+  if(!re.test(fullNameValue)) {
+      setErrorFor(fullName, "Este campo não aceita número e nem caracteres especiais");
       return false;
   }
 
-  setSuccessFor(firstName);
+  setSuccessFor(fullName);
   return true;
+
 };
 
-function inputLNameCheck() {
-  const lastNameValue = lastName.value.trim();
-  const re = /^[A-Za-záàâãéèêíïóôõöüúçñÁÀÂÃÉÈÍÏÓÔÕÖÜÚÇÑ ]+$/;
+/*Bairro*/
+function inputBairroCheck() {
+  const bairroAddressValue = bairro.value.trim();
+  
 
-  if (lastNameValue === "" || lastNameValue === null || lastNameValue === undefined) {
-      setErrorFor(lastName, "Este campo é requerido");
+  if (bairroAddressValue === "" || bairroAddressValue === null || bairroAddressValue === undefined) {
+      setErrorFor(bairro, "Este campo é requerido");
       return false;
   }
 
-  if (lastNameValue.length < 3) {
-      setErrorFor(lastName, "Este campo precisa ter pelo menos 3 caracteres");
+  if (bairroAddressValue.length < 3) {
+      setErrorFor(bairro, "Este campo precisa ter pelo menos 3 caracteres");
       return false;
   }
 
-  if(!re.test(lastNameValue)) {
-      setErrorFor(lastName, "Este campo não aceita número e nem caracteres especiais");
-      return false;
-  }
-
-  setSuccessFor(lastName);
+  setSuccessFor(bairro);
   return true;
-};
+  
+}
 
 /** CPF Validation */
 function inputCpfCheck() {
   let cpfValue = cpf.value.trim().replace(/[\.|\/|\-]/g, "");
+
+  console.log(cpfValue.length)
+  
 
   if(cpfValue === "" || cpfValue === null || cpfValue === undefined) {
       setErrorFor(cpf, "Este campo é requerido");
@@ -429,24 +350,6 @@ var controlos = [8, 9, 37, 39].includes(e.keyCode);
 if (!numero && !controlos) return e.preventDefault();
 });
 
-function inputBairroCheck() {
-  const bairroAddressValue = bairro.value.trim();
-
-  if (bairroAddressValue === "" || bairroAddressValue === null || bairroAddressValue === undefined) {
-      setErrorFor(bairro, "Este campo é requerido");
-      return false;
-  }
-
-  if (bairroAddressValue.length < 3) {
-      setErrorFor(bairro, "Este campo precisa ter pelo menos 3 caracteres");
-      return false;
-  }
-
-  setSuccessFor(bairro);
-  return true;
-  
-}
-
 function inputUfCheck() {
   const ufValue = uf.value.trim();
   const re = /^[A-Z]+$/;
@@ -496,6 +399,7 @@ function inputPhoneCheck() {
       return false;
   }
 
+
   setSuccessFor(phone);
   return true;
 }
@@ -533,7 +437,7 @@ function inputEmailConfirmCheck() {
 
   if(emailConfirmValue !== emailValue) {
       setErrorFor(email, "");
-      setErrorFor(emailConfirm, "Este e-mail é diferente do anterior, por favor, digite o mesmo e-mail!");
+      setErrorFor(emailConfirm, "Este e-mail é diferente do anterior, por favor, digite o mesmo e-mail!")
       return false;
   }
 
@@ -548,7 +452,9 @@ function inputNumberCardCheck() {
   if(numeroCValue === "") {
       setErrorFor(numeroC, "Este campo é requerido");
       return false;
-  } else if(numeroCValue.length < 16) {
+  } 
+  
+  if(numeroCValue.length < 16) {
       setErrorFor(numeroC, "Este campo precisa ter o padrão EX: 0000 0000 0000 0000");
       return false;
   }
@@ -559,49 +465,51 @@ function inputNumberCardCheck() {
 
 function inputNameCardCheck() {
   const nomeCValue = nomeC.value.trim();
+  const re = /^[A-Za-záàâãéèêíïóôõöüúçñÁÀÂÃÉÈÍÏÓÔÕÖÜÚÇÑ ]+$/;
 
   if(nomeCValue === "") {
-      setErrorFor(nomeC, "Este campo é requerido");
+      setErrorFor(nomeC, "Campo Obrigatório");
       return false;
-  } else if (nomeCValue.length < 3) {
+  }
+  
+  if(!re.test(nomeCValue)) {
+      setErrorFor(nomeC, "Este campo não aceita número e nem caracteres especiais");
+      return false;
+  }
+
+  if (nomeCValue.length < 3) {
       setErrorFor(nomeC, "Este campo precisa ter pelo menos 3 caracteres");
       return false;
   }
+
 
   setSuccessFor(nomeC);
   return true;
 };
 
-function inputExpCCheck() {
-  const expCValue = expC.value.trim();
+function selectMonthCardCehck() {
+  const expCMValue = expCM.value.trim();
   
-  if(expCValue === "") {
-      setErrorFor(expC, "Este campo é requerido");
+  if(expCMValue === "MM") {
+      setErrorFor(expCM, "Campo requerido");
       return false;
   }
 
-  console.log(expCValue.length)
-
-  if(expCValue.length < 5) {
-    setErrorFor(expC, "Por favor preencher no formato EX: 12/30");
-    return false;
-  }
-
-  setSuccessFor(expC);
+  setSuccessFor(expCM);
   return true;    
 }
 
-// function selectMonthCardCehck() {
-//   const expCMValue = expCM.value.trim();
+function selectYearCardCheck() {
+  const expCAValue = expCA.value.trim();
   
-//   if(expCMValue === "MM") {
-//       setErrorFor(expCM, "Campo requerido");
-//       return false;
-//   }
+  if(expCAValue === "AA") {
+      setErrorFor(expCA, "Campo requerido");
+      return false;
+  }
 
-//   setSuccessFor(expCM);
-//   return true;    
-// }
+  setSuccessFor(expCA);
+  return true;   
+}
 
 function inputSecurityCodeCheck() {
   const codigoSegurancaValue = codigoSeguranca.value.trim();
@@ -631,69 +539,41 @@ function inputCheckboxCheck() {
 async function inputCheckAll() {
   const resultFecth = await inputCepCheck();
 
-  return inputEmailCheck()
-  && inputEmailConfirmCheck()
+  return inputNameCheck()
   && inputCpfCheck()
   && resultFecth
   && inputAddressCheck()
   && inputNumberAddressCheck()
+  && inputBairroCheck()
   && inputUfCheck()
   && inputCityCheck()
   && inputPhoneCheck()
-  && inputNameCardCheck()
+  && inputEmailCheck()
+  && inputEmailConfirmCheck()
   && inputNumberCardCheck()
-  && inputExpCCheck()
+  && inputNameCardCheck()
+  && selectMonthCardCehck()
+  && selectYearCardCheck()
   && inputSecurityCodeCheck()
-  && inputCheckboxCheck();
+  && inputCheckboxCheck()
 };
 
 btnSubmit.addEventListener("click", async(e) => {
   e.preventDefault();
   const inputCheckAwait = await inputCheckAll();
-  
+
   if( inputCheckAwait === true ) {
-    
-    const numeroCValue = numeroC.value.trim().replace(" ", "").replace(" ", "").replace(" ", "");
-
-    const nomeSobrenome = nomeC.value.split(' ', 1);
-    nomeSobrenome.push(nomeC.value.slice(nomeSobrenome.join('').length).trim());
-
-    const expCValue = expC.value.split("/");
-    const mes = expCValue[0];
-    const ano = expCValue[1];
-    const codigoSegurancaValue = codigoSeguranca.value.trim();
-
-    var cc = Iugu.CreditCard(numeroCValue, mes, ano, nomeSobrenome[0],nomeSobrenome[1], codigoSegurancaValue);
-
-    if(cc.valid()){
-      Iugu.createPaymentToken(cc, function(response) {
-        if (response.errors) {
-            setErrorFor(numeroC, "Dados inválidos.");
-            return false;
-        } else {
-            const token = response.id;
-            //AQUI TEMOS QUE RETIRAR DADOS ENVIADOS PARA O SV
-            document.getElementById("exp_c").name = "";
-            document.getElementById("cvv_c").name = "";
-            document.getElementById("number_c").name = "";
-            document.getElementById("tokenIugu").value = token;
-
-            formSubmit.submit();
-        }   
-      });
-    }else{
-      setErrorFor(numeroC, "Dados incorretos do cartão de crédito");
-      return false;
-    }      
-
+      formSubmit.submit();
+      // location.href = "?page=navega&pg=obrigado"
   }
 });
 
+
 function setErrorFor(input, message) {
   const inputValidation = input.parentNode;
-  const small = inputValidation.querySelector("small.error");
+  const span = inputValidation.querySelector("small.error");
 
-  small.innerHTML = message;
+  span.innerHTML = message;
 
   inputValidation.classList.remove("success");
   inputValidation.classList.add("error");
