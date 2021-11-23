@@ -640,10 +640,17 @@ body {
   max-width: 1400px;
   height: auto;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
   position: relative;
   z-index: 1;
+}
+
+@media only screen and (min-width: 750px) {
+  .wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 main {
@@ -1219,9 +1226,9 @@ footer p a {
 }
 
 .moduleContent .form-content .card-section .form-wrap {
-  width: calc(100% + 40px);
-  -webkit-transform: translate(-20px, 0);
-          transform: translate(-20px, 0);
+  width: calc(100% + 32px);
+  -webkit-transform: translate(-16px, 0);
+          transform: translate(-16px, 0);
   padding: 40px 0 34px 16px;
   background: #2C2C35;
   display: -webkit-box;
@@ -1334,12 +1341,81 @@ footer p a {
   cursor: pointer;
 }
 
+.moduleContent .form-content .card-section .form-wrap .termos {
+  /* Customize the label (the container) */
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* On mouse-over, add a grey background color */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
 .moduleContent .form-content .card-section .form-wrap .termos label {
   margin-bottom: 40px;
 }
 
 .moduleContent .form-content .card-section .form-wrap .termos label a {
   color: #75E2F8;
+}
+
+.moduleContent .form-content .card-section .form-wrap .termos .form-check-label {
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.moduleContent .form-content .card-section .form-wrap .termos .form-check-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.moduleContent .form-content .card-section .form-wrap .termos .checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #37373f;
+  border: 1px solid #707070;
+  border-radius: 4px;
+}
+
+.moduleContent .form-content .card-section .form-wrap .termos .form-check-label:hover input ~ .checkmark {
+  background-color: #37373f;
+}
+
+.moduleContent .form-content .card-section .form-wrap .termos .form-check-label input:checked ~ .checkmark {
+  background-color: #37373f;
+}
+
+.moduleContent .form-content .card-section .form-wrap .termos .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.moduleContent .form-content .card-section .form-wrap .termos .form-check-label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.moduleContent .form-content .card-section .form-wrap .termos .form-check-label .checkmark:after {
+  left: 2px;
+  top: 2px;
+  width: 10px;
+  background: #fff;
+  height: 10px;
+  border-radius: 2px;
 }
 
 .moduleContent .form-content .form-cont-btn {
@@ -1461,8 +1537,14 @@ footer p a {
 .moduleContent .order-box .info-box {
   border-radius: 16px;
   background: #2C2C35;
-  padding: 40px;
+  padding: 40px 16px;
   margin-top: 40px;
+}
+
+@media only screen and (min-width: 750px) {
+  .moduleContent .order-box .info-box {
+    padding: 40px;
+  }
 }
 
 .moduleContent .order-box .info-box .header-garant {
