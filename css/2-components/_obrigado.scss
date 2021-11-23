@@ -1,0 +1,10 @@
+.obrigado-fix{
+    header{
+        @include respond-to-min(750){
+            padding: 270px 0px 340px;
+        }
+    }
+    footer{
+        margin: 0;
+    }
+}
