@@ -1219,19 +1219,31 @@ footer p a {
 }
 
 .moduleContent .form-content .card-section .form-wrap {
+  width: calc(100% + 40px);
+  -webkit-transform: translate(-20px, 0);
+          transform: translate(-20px, 0);
+  padding: 40px 0 34px 16px;
   background: #2C2C35;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 40px 8px 34px 24px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 0px 16px 16px 16px;
   margin-top: 5px;
   margin-bottom: 34px;
+}
+
+@media only screen and (min-width: 750px) {
+  .moduleContent .form-content .card-section .form-wrap {
+    width: 100%;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    padding: 40px 8px 34px 24px;
+  }
 }
 
 .moduleContent .form-content .card-section .form-wrap:nth-child(2) {
