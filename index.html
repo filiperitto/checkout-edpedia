@@ -35,6 +35,7 @@
 
     <div class="main">
         <header>
+            <div class="bg"></div>
             <img src="imgs/logo.svg">
 
             <div class="text-box">
@@ -43,276 +44,278 @@
                 <h3>PREENCHA OS CAMPOS ABAIXO PARA EFETUAR SEU PEDIDO</h3>
             </div>
         </header>
-        <div class="wrap moduleContent">
-            <section class="prod-box">
-                <div class="img-wrap">
-                    <img alt="produto" src="imgs/Imagem_7_2x.png">
-                </div>
-                <div class="header-product">
-                    <h3>7 Dicas Para Economizar Dinheiro</h3>
-                    <h4><span>Oferta principal</span> 12 x de R$ 14,99*</h4>
-                </div>
-            </section>
-
-            <section class="form-content">
-                <form id="checkout" method="POST" action='index.php' data-ajax='false'>
-                    <input type='hidden' name='page' value='assinar_cc'>
-                    <input type='hidden' name='origem' value='##ORIGEM##'>
-                    <input type='hidden' name='id_tipo_assinatura' value='##ID_TIPO_ASSINATURA##'>
-                    <input type="hidden" name="pgCheckout" value="pagamento" />
-                    <input type="hidden" name="pgObrigado" value="obrigado" />
-                    <input type="hidden" name="exp_c" id="exp_c"/>
-
-                    <div class="card card-section">
-                        <div class="title-box">
-                            <img alt="info pessoal" src="imgs/Grupo_993.png">
-                            <h3>Informações Pessoais</h3>
-                        </div>
-                        <div class="erro" style="color: #e74c3c;">##MSG_ERRO##</div>
-                        <div class="form-wrap">
-                            <div class="form-input form-nome">
-                                <label for="first-name">Nome Completo</label>
-                                <input type="text" class="form-control input-validation" name="nome" id="nome" aria-describedby="nome" placeholder="Nome Completo">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-cpf">
-                                <label for="cpf">CPF / CNPJ</label>
-                                <input type="text" class="form-control input-validation" name="cpf" id="cpf" aria-describedby="cpf    " placeholder="CPF / CNPJ">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-cep">
-                                <label for="cep">CEP (Busca de Endereços)</label>
-                                <input type="text" class="form-control input-validation" name="cep" id="cep" aria-describedby="cep" placeholder="CEP (Busca de Endereço)">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-celular">
-                                <label for="telefone">Celular</label>
-                                <input type="text" class="form-control input-validation" name="telefone" id="telefone" aria-describedby="telefone" placeholder="Celular">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            
-
-                            <div class="form-input form-estado">
-                                <label for="uf">Estado*</label>
-                                
-                                <input type="text" class="form-control input-validation" name="uf" id="uf" aria-describedby="uf" placeholder="UF">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-cidade">
-                                <label for="cidade">Cidade*</label>
-                                <input type="text" class="form-control input-validation" name="cidade" id="localidade" aria-describedby="localidade" placeholder="Cidade">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-rua">
-                                <label for="rua">Rua*</label>
-                                <input type="text" class="form-control input-validation" name="rua" id="logradouro" aria-describedby="logradouro" placeholder="logradouro">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-
-                            <div class="form-input form-numero">
-                                <label for="numero">Numero*</label>
-                                <input type="text" class="form-control input-validation" name="numero" id="numero" aria-describedby="numero" placeholder="Número">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-comp">
-                                <label for="complemento">Complemento</label>
-                                <input type="text" class="form-control input-validation" name="complementoEndereco" id="complementoEndereco" aria-describedby="complementoEndereco" placeholder="Complemento">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-bairro">
-                                <label for="bairro">Bairro*</label>
-                                <input type="text" class="form-control input-validation" name="bairro" id="bairro" aria-describedby="bairro" placeholder="Bairro">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-
-
-                            <div class="form-input form-email">
-                                <label for="email">E-mail</label>
-                                
-                                <input type="text" class="form-control input-validation" name="email" id="email" aria-describedby="email" placeholder="E-mail">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-email">
-                                <label for="email-confirm">Confirme seu email</label>
-                                <input type="text" class="form-control input-validation" name="email-confirm" id="email-confirm" aria-describedby="email-confirm" placeholder="Confirme seu e-mail">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="card card-section">
-                        <div class="title-box">
-                            <img alt="credito" src="imgs/Grupo_995.png">
-                              
-                            <h3>Cartão de Crédito</h3>
-                        </div>
-                        <div class="form-wrap">
-                            <div class="form-input form-numero-cartao">
-                                <input type="text" class="form-control input-validation" name="number_c" id="number_c" aria-describedby="numero-cartao" placeholder="Número do Cartão">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-nome-cartao">
-                                <input type="text" class="form-control input-validation" name="holdername_c" id="holdername_c" aria-describedby="holdername_c" placeholder="Nome do Títular do Cartão">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-validade">
-                                <select class="custom-select input-validation" name="exp_cm" id="exp_cm">
-                                    <option value="MM" selected disabled>MM</option>
-                                    <option value="01">01</option>
-                                    <option value="02">02</option>
-                                    <option value="03">03</option>
-                                    <option value="04">04</option>
-                                    <option value="05">05</option>
-                                    <option value="06">06</option>
-                                    <option value="07">07</option>
-                                    <option value="08">08</option>
-                                    <option value="09">09</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-validade">
-                                <select class="custom-select input-validation" name="exp_ca" id="exp_ca">
-                                    <option value="AA" selected disabled>AA</option>
-                                    <option value="2021">2021</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2025">2025</option>
-                                    <option value="2026">2026</option>
-                                    <option value="2027">2027</option>
-                                    <option value="2028">2028</option>
-                                    <option value="2029">2029</option>
-                                    <option value="2030">2030</option>
-                                    <option value="2031">2031</option>
-                                    <option value="2032">2032</option>
-                                </select>
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-                            <div class="form-input form-cvv">
-                                <input type="text" class="form-control input-validation" name="cvv_c" id="cvv_c" aria-describedby="cvv" placeholder="Código de segurança">
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-
-                            <div class="form-input form-parcelas">
-                                <select class="custom-select input-validation" name="installments" id="installments" aria-describedby="installments" required="required">
-                                    ##PARCELAS##
-                                </select>
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-
-                            <div class="form-checkbox termos">
-                                <input type="checkbox" class="checkbox" name="envia_email_produto" id="terms" checked>
-                                <label class="link-terms" for="terms">Li e Aceito os <a href="?page=navega&pg=termos" style="color: #75E2F8;" target="_blank">Termos de Uso</a></label>
-                                <i class="fas fa-check-circle"></i>
-                                <i class="fas fa-exclamation-circle"></i>
-                                <small class="error">Error Message</small>
-                            </div>
-
-                            <div class="termos">
-                                
-                                <label class="link-terms" for="terms">Ao fazer seu pedido, você concorda com a política de privacidade e os <a href="?page=navega&pg=termos">termos de uso do Edpedia</a>. Você receberá as últimas atualizações do curso e notícias da Edpedia.</label>
-                                
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
-
-                    <div class="form-cont-btn">
-                        <button class="btn" id="btn-submit">
-                            Confirmar pedido
-                        </button>
-                    </div>
-                </form>
-            </section>
-
-            <section class="order-box">
-                <img class="resumo-prod" alt="img-order-topo" src="imgs/Imagem_31_2x.png">
-                
-                <div class="prod-box-resumo">
+        <div class="moduleContent">
+            <div class="wrap">
+                <section class="prod-box">
                     <div class="img-wrap">
-                        <img src="imgs/Imagem_7_2x.png">
+                        <img alt="produto" src="imgs/Imagem_7_2x.png">
                     </div>
                     <div class="header-product">
                         <h3>7 Dicas Para Economizar Dinheiro</h3>
                         <h4><span>Oferta principal</span> 12 x de R$ 14,99*</h4>
                     </div>
-                </div>
+                </section>
 
-                <div class="info-box">
-                    <div class="header-garant">
-                        <h2>Garantia<br>
-                            Incondicional</h2>
-                        <div class="star">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.851" viewBox="0 0 24 22.851">
-                                <path id="Caminho_193" data-name="Caminho 193" d="M24,9.051a4.633,4.633,0,0,1-.536.815q-2.314,2.3-4.664,4.556a.551.551,0,0,0-.19.563c.384,2.174.746,4.351,1.121,6.526a1.093,1.093,0,0,1-1.637,1.176c-1.951-1.03-3.908-2.05-5.856-3.085a.521.521,0,0,0-.56,0c-1.938,1.029-3.884,2.043-5.825,3.068a1.094,1.094,0,0,1-1.258-.04,1.072,1.072,0,0,1-.409-1.156c.074-.366.122-.738.185-1.106.309-1.807.614-3.615.935-5.42a.491.491,0,0,0-.165-.5C3.58,12.935,2.029,11.412.468,9.9A1.139,1.139,0,0,1,.062,8.643a1.19,1.19,0,0,1,1.114-.777c2.126-.3,4.249-.619,6.375-.915A.556.556,0,0,0,8.03,6.6Q9.469,3.657,10.925.725A1.085,1.085,0,0,1,12.207.032a1.146,1.146,0,0,1,.784.689c.957,1.948,1.924,3.891,2.876,5.842a.608.608,0,0,0,.53.39c2.115.292,4.226.61,6.339.914.756.109,1.184.51,1.177,1.127L24,9.051" transform="translate(0)" fill="#f9b000"/>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.851" viewBox="0 0 24 22.851">
-                                <path id="Caminho_193" data-name="Caminho 193" d="M24,9.051a4.633,4.633,0,0,1-.536.815q-2.314,2.3-4.664,4.556a.551.551,0,0,0-.19.563c.384,2.174.746,4.351,1.121,6.526a1.093,1.093,0,0,1-1.637,1.176c-1.951-1.03-3.908-2.05-5.856-3.085a.521.521,0,0,0-.56,0c-1.938,1.029-3.884,2.043-5.825,3.068a1.094,1.094,0,0,1-1.258-.04,1.072,1.072,0,0,1-.409-1.156c.074-.366.122-.738.185-1.106.309-1.807.614-3.615.935-5.42a.491.491,0,0,0-.165-.5C3.58,12.935,2.029,11.412.468,9.9A1.139,1.139,0,0,1,.062,8.643a1.19,1.19,0,0,1,1.114-.777c2.126-.3,4.249-.619,6.375-.915A.556.556,0,0,0,8.03,6.6Q9.469,3.657,10.925.725A1.085,1.085,0,0,1,12.207.032a1.146,1.146,0,0,1,.784.689c.957,1.948,1.924,3.891,2.876,5.842a.608.608,0,0,0,.53.39c2.115.292,4.226.61,6.339.914.756.109,1.184.51,1.177,1.127L24,9.051" transform="translate(0)" fill="#f9b000"/>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.851" viewBox="0 0 24 22.851">
-                                <path id="Caminho_193" data-name="Caminho 193" d="M24,9.051a4.633,4.633,0,0,1-.536.815q-2.314,2.3-4.664,4.556a.551.551,0,0,0-.19.563c.384,2.174.746,4.351,1.121,6.526a1.093,1.093,0,0,1-1.637,1.176c-1.951-1.03-3.908-2.05-5.856-3.085a.521.521,0,0,0-.56,0c-1.938,1.029-3.884,2.043-5.825,3.068a1.094,1.094,0,0,1-1.258-.04,1.072,1.072,0,0,1-.409-1.156c.074-.366.122-.738.185-1.106.309-1.807.614-3.615.935-5.42a.491.491,0,0,0-.165-.5C3.58,12.935,2.029,11.412.468,9.9A1.139,1.139,0,0,1,.062,8.643a1.19,1.19,0,0,1,1.114-.777c2.126-.3,4.249-.619,6.375-.915A.556.556,0,0,0,8.03,6.6Q9.469,3.657,10.925.725A1.085,1.085,0,0,1,12.207.032a1.146,1.146,0,0,1,.784.689c.957,1.948,1.924,3.891,2.876,5.842a.608.608,0,0,0,.53.39c2.115.292,4.226.61,6.339.914.756.109,1.184.51,1.177,1.127L24,9.051" transform="translate(0)" fill="#f9b000"/>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.851" viewBox="0 0 24 22.851">
-                                <path id="Caminho_193" data-name="Caminho 193" d="M24,9.051a4.633,4.633,0,0,1-.536.815q-2.314,2.3-4.664,4.556a.551.551,0,0,0-.19.563c.384,2.174.746,4.351,1.121,6.526a1.093,1.093,0,0,1-1.637,1.176c-1.951-1.03-3.908-2.05-5.856-3.085a.521.521,0,0,0-.56,0c-1.938,1.029-3.884,2.043-5.825,3.068a1.094,1.094,0,0,1-1.258-.04,1.072,1.072,0,0,1-.409-1.156c.074-.366.122-.738.185-1.106.309-1.807.614-3.615.935-5.42a.491.491,0,0,0-.165-.5C3.58,12.935,2.029,11.412.468,9.9A1.139,1.139,0,0,1,.062,8.643a1.19,1.19,0,0,1,1.114-.777c2.126-.3,4.249-.619,6.375-.915A.556.556,0,0,0,8.03,6.6Q9.469,3.657,10.925.725A1.085,1.085,0,0,1,12.207.032a1.146,1.146,0,0,1,.784.689c.957,1.948,1.924,3.891,2.876,5.842a.608.608,0,0,0,.53.39c2.115.292,4.226.61,6.339.914.756.109,1.184.51,1.177,1.127L24,9.051" transform="translate(0)" fill="#f9b000"/>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.851" viewBox="0 0 24 22.851">
-                                <path id="Caminho_193" data-name="Caminho 193" d="M24,9.051a4.633,4.633,0,0,1-.536.815q-2.314,2.3-4.664,4.556a.551.551,0,0,0-.19.563c.384,2.174.746,4.351,1.121,6.526a1.093,1.093,0,0,1-1.637,1.176c-1.951-1.03-3.908-2.05-5.856-3.085a.521.521,0,0,0-.56,0c-1.938,1.029-3.884,2.043-5.825,3.068a1.094,1.094,0,0,1-1.258-.04,1.072,1.072,0,0,1-.409-1.156c.074-.366.122-.738.185-1.106.309-1.807.614-3.615.935-5.42a.491.491,0,0,0-.165-.5C3.58,12.935,2.029,11.412.468,9.9A1.139,1.139,0,0,1,.062,8.643a1.19,1.19,0,0,1,1.114-.777c2.126-.3,4.249-.619,6.375-.915A.556.556,0,0,0,8.03,6.6Q9.469,3.657,10.925.725A1.085,1.085,0,0,1,12.207.032a1.146,1.146,0,0,1,.784.689c.957,1.948,1.924,3.891,2.876,5.842a.608.608,0,0,0,.53.39c2.115.292,4.226.61,6.339.914.756.109,1.184.51,1.177,1.127L24,9.051" transform="translate(0)" fill="#f9b000"/>
-                            </svg>
+                <section class="form-content">
+                    <form id="checkout" method="POST" action='index.php' data-ajax='false'>
+                        <input type='hidden' name='page' value='assinar_cc'>
+                        <input type='hidden' name='origem' value='##ORIGEM##'>
+                        <input type='hidden' name='id_tipo_assinatura' value='##ID_TIPO_ASSINATURA##'>
+                        <input type="hidden" name="pgCheckout" value="pagamento" />
+                        <input type="hidden" name="pgObrigado" value="obrigado" />
+                        <input type="hidden" name="exp_c" id="exp_c"/>
+
+                        <div class="card card-section">
+                            <div class="title-box">
+                                <img alt="info pessoal" src="imgs/Grupo_993.png">
+                                <h3>Informações Pessoais</h3>
+                            </div>
+                            <div class="erro" style="color: #e74c3c;">##MSG_ERRO##</div>
+                            <div class="form-wrap">
+                                <div class="form-input form-nome">
+                                    <label for="first-name">Nome Completo</label>
+                                    <input type="text" class="form-control input-validation" name="nome" id="nome" aria-describedby="nome" placeholder="Nome Completo">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-cpf">
+                                    <label for="cpf">CPF / CNPJ</label>
+                                    <input type="text" class="form-control input-validation" name="cpf" id="cpf" aria-describedby="cpf    " placeholder="CPF / CNPJ">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-cep">
+                                    <label for="cep">CEP (Busca de Endereços)</label>
+                                    <input type="text" class="form-control input-validation" name="cep" id="cep" aria-describedby="cep" placeholder="CEP (Busca de Endereço)">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-celular">
+                                    <label for="telefone">Celular</label>
+                                    <input type="text" class="form-control input-validation" name="telefone" id="telefone" aria-describedby="telefone" placeholder="Celular">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                
+
+                                <div class="form-input form-estado">
+                                    <label for="uf">Estado*</label>
+                                    
+                                    <input type="text" class="form-control input-validation" name="uf" id="uf" aria-describedby="uf" placeholder="UF">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-cidade">
+                                    <label for="cidade">Cidade*</label>
+                                    <input type="text" class="form-control input-validation" name="cidade" id="localidade" aria-describedby="localidade" placeholder="Cidade">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-rua">
+                                    <label for="rua">Rua*</label>
+                                    <input type="text" class="form-control input-validation" name="rua" id="logradouro" aria-describedby="logradouro" placeholder="logradouro">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+
+                                <div class="form-input form-numero">
+                                    <label for="numero">Numero*</label>
+                                    <input type="text" class="form-control input-validation" name="numero" id="numero" aria-describedby="numero" placeholder="Número">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-comp">
+                                    <label for="complemento">Complemento</label>
+                                    <input type="text" class="form-control input-validation" name="complementoEndereco" id="complementoEndereco" aria-describedby="complementoEndereco" placeholder="Complemento">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-bairro">
+                                    <label for="bairro">Bairro*</label>
+                                    <input type="text" class="form-control input-validation" name="bairro" id="bairro" aria-describedby="bairro" placeholder="Bairro">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+
+
+                                <div class="form-input form-email">
+                                    <label for="email">E-mail</label>
+                                    
+                                    <input type="text" class="form-control input-validation" name="email" id="email" aria-describedby="email" placeholder="E-mail">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-email">
+                                    <label for="email-confirm">Confirme seu email</label>
+                                    <input type="text" class="form-control input-validation" name="email-confirm" id="email-confirm" aria-describedby="email-confirm" placeholder="Confirme seu e-mail">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card card-section">
+                            <div class="title-box">
+                                <img alt="credito" src="imgs/Grupo_995.png">
+                                
+                                <h3>Cartão de Crédito</h3>
+                            </div>
+                            <div class="form-wrap">
+                                <div class="form-input form-numero-cartao">
+                                    <input type="text" class="form-control input-validation" name="number_c" id="number_c" aria-describedby="numero-cartao" placeholder="Número do Cartão">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-nome-cartao">
+                                    <input type="text" class="form-control input-validation" name="holdername_c" id="holdername_c" aria-describedby="holdername_c" placeholder="Nome do Títular do Cartão">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-validade">
+                                    <select class="custom-select input-validation" name="exp_cm" id="exp_cm">
+                                        <option value="MM" selected disabled>MM</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-validade">
+                                    <select class="custom-select input-validation" name="exp_ca" id="exp_ca">
+                                        <option value="AA" selected disabled>AA</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                        <option value="2031">2031</option>
+                                        <option value="2032">2032</option>
+                                    </select>
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+                                <div class="form-input form-cvv">
+                                    <input type="text" class="form-control input-validation" name="cvv_c" id="cvv_c" aria-describedby="cvv" placeholder="Código de segurança">
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+
+                                <div class="form-input form-parcelas">
+                                    <select class="custom-select input-validation" name="installments" id="installments" aria-describedby="installments" required="required">
+                                        ##PARCELAS##
+                                    </select>
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+
+                                <div class="form-checkbox termos">
+                                    <input type="checkbox" class="checkbox" name="envia_email_produto" id="terms" checked>
+                                    <label class="link-terms" for="terms">Li e Aceito os <a href="?page=navega&pg=termos" style="color: #75E2F8;" target="_blank">Termos de Uso</a></label>
+                                    <i class="fas fa-check-circle"></i>
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    <small class="error">Error Message</small>
+                                </div>
+
+                                <div class="termos">
+                                    
+                                    <label class="link-terms" for="terms">Ao fazer seu pedido, você concorda com a política de privacidade e os <a href="?page=navega&pg=termos">termos de uso do Edpedia</a>. Você receberá as últimas atualizações do curso e notícias da Edpedia.</label>
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+
+                        <div class="form-cont-btn">
+                            <button class="btn" id="btn-submit">
+                                Confirmar pedido
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="order-box">
+                    <img class="resumo-prod" alt="img-order-topo" src="imgs/Imagem_31_2x.png">
+                    
+                    <div class="prod-box-resumo">
+                        <div class="img-wrap">
+                            <img src="imgs/Imagem_7_2x.png">
+                        </div>
+                        <div class="header-product">
+                            <h3>7 Dicas Para Economizar Dinheiro</h3>
+                            <h4><span>Oferta principal</span> 12 x de R$ 14,99*</h4>
                         </div>
                     </div>
-                    <div class="desc-garant">
-                        <p>De 07 Dias!<br><br>
-                            Sabemos da qualidade do que entregamos e por isso você tem a garantia incondicional de 7 dias. Isso significa que se algo, qualquer coisa não agradar você, caso ache que seus objetivos não serão atingidos, basta enviar um simples e-mail para o suporte e nós reembolsaremos 100% do valor do seu investimento, sem burocracia alguma!
-                        </p>
+
+                    <div class="info-box">
+                        <div class="header-garant">
+                            <h2>Garantia<br>
+                                Incondicional</h2>
+                            <div class="star">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.851" viewBox="0 0 24 22.851">
+                                    <path id="Caminho_193" data-name="Caminho 193" d="M24,9.051a4.633,4.633,0,0,1-.536.815q-2.314,2.3-4.664,4.556a.551.551,0,0,0-.19.563c.384,2.174.746,4.351,1.121,6.526a1.093,1.093,0,0,1-1.637,1.176c-1.951-1.03-3.908-2.05-5.856-3.085a.521.521,0,0,0-.56,0c-1.938,1.029-3.884,2.043-5.825,3.068a1.094,1.094,0,0,1-1.258-.04,1.072,1.072,0,0,1-.409-1.156c.074-.366.122-.738.185-1.106.309-1.807.614-3.615.935-5.42a.491.491,0,0,0-.165-.5C3.58,12.935,2.029,11.412.468,9.9A1.139,1.139,0,0,1,.062,8.643a1.19,1.19,0,0,1,1.114-.777c2.126-.3,4.249-.619,6.375-.915A.556.556,0,0,0,8.03,6.6Q9.469,3.657,10.925.725A1.085,1.085,0,0,1,12.207.032a1.146,1.146,0,0,1,.784.689c.957,1.948,1.924,3.891,2.876,5.842a.608.608,0,0,0,.53.39c2.115.292,4.226.61,6.339.914.756.109,1.184.51,1.177,1.127L24,9.051" transform="translate(0)" fill="#f9b000"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.851" viewBox="0 0 24 22.851">
+                                    <path id="Caminho_193" data-name="Caminho 193" d="M24,9.051a4.633,4.633,0,0,1-.536.815q-2.314,2.3-4.664,4.556a.551.551,0,0,0-.19.563c.384,2.174.746,4.351,1.121,6.526a1.093,1.093,0,0,1-1.637,1.176c-1.951-1.03-3.908-2.05-5.856-3.085a.521.521,0,0,0-.56,0c-1.938,1.029-3.884,2.043-5.825,3.068a1.094,1.094,0,0,1-1.258-.04,1.072,1.072,0,0,1-.409-1.156c.074-.366.122-.738.185-1.106.309-1.807.614-3.615.935-5.42a.491.491,0,0,0-.165-.5C3.58,12.935,2.029,11.412.468,9.9A1.139,1.139,0,0,1,.062,8.643a1.19,1.19,0,0,1,1.114-.777c2.126-.3,4.249-.619,6.375-.915A.556.556,0,0,0,8.03,6.6Q9.469,3.657,10.925.725A1.085,1.085,0,0,1,12.207.032a1.146,1.146,0,0,1,.784.689c.957,1.948,1.924,3.891,2.876,5.842a.608.608,0,0,0,.53.39c2.115.292,4.226.61,6.339.914.756.109,1.184.51,1.177,1.127L24,9.051" transform="translate(0)" fill="#f9b000"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.851" viewBox="0 0 24 22.851">
+                                    <path id="Caminho_193" data-name="Caminho 193" d="M24,9.051a4.633,4.633,0,0,1-.536.815q-2.314,2.3-4.664,4.556a.551.551,0,0,0-.19.563c.384,2.174.746,4.351,1.121,6.526a1.093,1.093,0,0,1-1.637,1.176c-1.951-1.03-3.908-2.05-5.856-3.085a.521.521,0,0,0-.56,0c-1.938,1.029-3.884,2.043-5.825,3.068a1.094,1.094,0,0,1-1.258-.04,1.072,1.072,0,0,1-.409-1.156c.074-.366.122-.738.185-1.106.309-1.807.614-3.615.935-5.42a.491.491,0,0,0-.165-.5C3.58,12.935,2.029,11.412.468,9.9A1.139,1.139,0,0,1,.062,8.643a1.19,1.19,0,0,1,1.114-.777c2.126-.3,4.249-.619,6.375-.915A.556.556,0,0,0,8.03,6.6Q9.469,3.657,10.925.725A1.085,1.085,0,0,1,12.207.032a1.146,1.146,0,0,1,.784.689c.957,1.948,1.924,3.891,2.876,5.842a.608.608,0,0,0,.53.39c2.115.292,4.226.61,6.339.914.756.109,1.184.51,1.177,1.127L24,9.051" transform="translate(0)" fill="#f9b000"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.851" viewBox="0 0 24 22.851">
+                                    <path id="Caminho_193" data-name="Caminho 193" d="M24,9.051a4.633,4.633,0,0,1-.536.815q-2.314,2.3-4.664,4.556a.551.551,0,0,0-.19.563c.384,2.174.746,4.351,1.121,6.526a1.093,1.093,0,0,1-1.637,1.176c-1.951-1.03-3.908-2.05-5.856-3.085a.521.521,0,0,0-.56,0c-1.938,1.029-3.884,2.043-5.825,3.068a1.094,1.094,0,0,1-1.258-.04,1.072,1.072,0,0,1-.409-1.156c.074-.366.122-.738.185-1.106.309-1.807.614-3.615.935-5.42a.491.491,0,0,0-.165-.5C3.58,12.935,2.029,11.412.468,9.9A1.139,1.139,0,0,1,.062,8.643a1.19,1.19,0,0,1,1.114-.777c2.126-.3,4.249-.619,6.375-.915A.556.556,0,0,0,8.03,6.6Q9.469,3.657,10.925.725A1.085,1.085,0,0,1,12.207.032a1.146,1.146,0,0,1,.784.689c.957,1.948,1.924,3.891,2.876,5.842a.608.608,0,0,0,.53.39c2.115.292,4.226.61,6.339.914.756.109,1.184.51,1.177,1.127L24,9.051" transform="translate(0)" fill="#f9b000"/>
+                                </svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.851" viewBox="0 0 24 22.851">
+                                    <path id="Caminho_193" data-name="Caminho 193" d="M24,9.051a4.633,4.633,0,0,1-.536.815q-2.314,2.3-4.664,4.556a.551.551,0,0,0-.19.563c.384,2.174.746,4.351,1.121,6.526a1.093,1.093,0,0,1-1.637,1.176c-1.951-1.03-3.908-2.05-5.856-3.085a.521.521,0,0,0-.56,0c-1.938,1.029-3.884,2.043-5.825,3.068a1.094,1.094,0,0,1-1.258-.04,1.072,1.072,0,0,1-.409-1.156c.074-.366.122-.738.185-1.106.309-1.807.614-3.615.935-5.42a.491.491,0,0,0-.165-.5C3.58,12.935,2.029,11.412.468,9.9A1.139,1.139,0,0,1,.062,8.643a1.19,1.19,0,0,1,1.114-.777c2.126-.3,4.249-.619,6.375-.915A.556.556,0,0,0,8.03,6.6Q9.469,3.657,10.925.725A1.085,1.085,0,0,1,12.207.032a1.146,1.146,0,0,1,.784.689c.957,1.948,1.924,3.891,2.876,5.842a.608.608,0,0,0,.53.39c2.115.292,4.226.61,6.339.914.756.109,1.184.51,1.177,1.127L24,9.051" transform="translate(0)" fill="#f9b000"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="desc-garant">
+                            <p>De 07 Dias!<br><br>
+                                Sabemos da qualidade do que entregamos e por isso você tem a garantia incondicional de 7 dias. Isso significa que se algo, qualquer coisa não agradar você, caso ache que seus objetivos não serão atingidos, basta enviar um simples e-mail para o suporte e nós reembolsaremos 100% do valor do seu investimento, sem burocracia alguma!
+                            </p>
+                        </div>
+
+                        <div class="badge-pessoas">
+                            <span>29</span>
+                            <p>PESSOAS ESTÃO ADQUIRINDO TAMBÉM</p>
+                        </div>
                     </div>
 
-                    <div class="badge-pessoas">
-                        <span>29</span>
-                        <p>PESSOAS ESTÃO ADQUIRINDO TAMBÉM</p>
-                    </div>
-                </div>
-
-            </section>
+                </section>
+            </div>
         </div>
         <footer>
             <div class="wrap">
