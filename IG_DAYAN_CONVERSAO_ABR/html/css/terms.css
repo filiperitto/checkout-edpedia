@@ -1,0 +1,72 @@
+:root {
+    --bg-green: #88AC2E;
+    --btn-success: #69B761;
+    --bg-yellow: #FFCB05;
+    --white: #FFFFFF;
+    --black: #161615;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: 3.65rem;
+    line-height: 4rem;
+}
+
+.sub-title {
+    font-size: 2.18rem;
+    line-height: 2rem;
+}
+
+ul, li {
+    list-style: disc;
+    margin-left: 0.4rem;
+    padding-left: 10px;
+}
+
+header {
+    padding: 20px;
+    position: relative;
+    background-color: #002B77;
+}
+
+header .container {
+    padding-bottom: 20px;
+    position: relative;
+    
+}
+
+header .container::after {
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid #002b77;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+main {
+    position: relative;
+    margin-bottom: 50px;
+    padding-bottom: 70px;
+}
+
+main::after {
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid #002b77;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+footer {
+    background-color: #002b77;
+}

@@ -1,0 +1,20 @@
+jQuery.extend(jQuery.validator.messages, {
+    required: "Este campo &eacute; requerido.",
+    remote: "Por favor, corrija este campo.",
+    email: "Por favor, forne&ccedil;a um endere&ccedil;o eletr&ocirc;nico v&aacute;lido.",
+    url: "Por favor, forne&ccedil;a uma URL v&aacute;lida.",
+    date: "Por favor, forne&ccedil;a uma data v&aacute;lida.",
+    dateISO: "Por favor, forne&ccedil;a uma data v&aacute;lida (ISO).",
+    number: "Por favor, forne&ccedil;a um n&uacute;mero v&aacute;lido.",
+    digits: "Por favor, forne&ccedil;a somente d&iacute;gitos.",
+    creditcard: "Por favor, forne&ccedil;a um cart&atilde;o de cr&eacute;dito v&aacute;lido.",
+    equalTo: "Email tem que ser igual nos 2 campos.",
+    accept: "Por favor, forne&ccedil;a um valor com uma extens&atilde;o v&aacute;lida.",
+    cep: " Por favor verifique o cep digítado pois é inválido",
+    maxlength: jQuery.validator.format("Por favor, forne&ccedil;a n&atilde;o mais que {0} caracteres."),
+    minlength: jQuery.validator.format("Por favor, forne&ccedil;a um número válido.  Ex.: (11) 11111-1111"),
+    rangelength: jQuery.validator.format("Por favor, forne&ccedil;a um valor entre {0} e {1} caracteres de comprimento."),
+    range: jQuery.validator.format("Por favor, forne&ccedil;a um valor entre {0} e {1}."),
+    max: jQuery.validator.format("Por favor, forne&ccedil;a um valor menor ou igual a {0}."),
+    min: jQuery.validator.format("Por favor, forne&ccedil;a um valor maior ou igual a {0}.")
+});
