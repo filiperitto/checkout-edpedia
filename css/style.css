@@ -1312,6 +1312,10 @@ footer p a {
   margin-bottom: 40px;
 }
 
+.moduleContent .form-content .card-section .form-wrap .termos label a {
+  color: #75E2F8;
+}
+
 .moduleContent .form-content .form-cont-btn {
   width: 100%;
   height: auto;
