@@ -1,5 +1,8 @@
 .moduloTermos{
-    padding-top: 35px;
+    header{
+        background: url(../imgs/bg.png) no-repeat;
+        background-size: cover;
+    }
     p{
         text-align: left;
         font-size: 16px;
@@ -13,12 +16,19 @@
     }
     h2{
         color: #83DEDD;
+        font-size: 27px;
         font-family: $font-regular;
     }
     ul{
         li{
             color: #fff;
             font-family: $font-regular;
+        }
+    }
+    a{
+        color: #75E2F8;
+        &:hover{
+            text-decoration: underline;
         }
     }
 }

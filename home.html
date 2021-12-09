@@ -244,7 +244,7 @@
                                 <div class="form-checkbox termos">
                                     
                                     <label class="link-terms form-check-label" for="terms">Li e Aceito os <a href="?page=navega&pg=termos" style="color: #75E2F8;" target="_blank">Termos de Uso</a>
-                                        <input type="checkbox" class="checkbox form-check-input" name="envia_email_produto" id="terms" checked>
+                                        <input type="checkbox" class="checkbox form-check-input" name="envia_email_produto" id="terms"  onchange="this.setCustomValidity(validity.valueMissing ? 'Indique que você aceita os Termos de Uso' : '');" required checked>
                                         <span class="checkmark"></span>
                                     </label>
                                     <i class="fas fa-check-circle"></i>

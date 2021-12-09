@@ -1643,8 +1643,9 @@ footer p a {
   margin: 0;
 }
 
-.moduloTermos {
-  padding-top: 35px;
+.moduloTermos header {
+  background: url(../imgs/bg.png) no-repeat;
+  background-size: cover;
 }
 
 .moduloTermos p {
@@ -1661,12 +1662,21 @@ footer p a {
 
 .moduloTermos h2 {
   color: #83DEDD;
+  font-size: 27px;
   font-family: "Work Sans", sans-serif;
 }
 
 .moduloTermos ul li {
   color: #fff;
   font-family: "Work Sans", sans-serif;
+}
+
+.moduloTermos a {
+  color: #75E2F8;
+}
+
+.moduloTermos a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 750px) {
