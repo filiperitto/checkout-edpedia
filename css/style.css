@@ -1081,6 +1081,10 @@ footer p a {
   text-decoration: underline;
 }
 
+.moduloTermos footer p {
+  text-align: center;
+}
+
 /*
  * Variables
  */
@@ -1333,12 +1337,38 @@ footer p a {
 
 .moduleContent .form-content .card-section .form-wrap .form-checkbox {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 12px 0;
+}
+
+.moduleContent .form-content .card-section .form-wrap .form-checkbox input {
+  margin: 0;
+  margin-top: 2px;
+  cursor: pointer;
 }
 
 .moduleContent .form-content .card-section .form-wrap .form-checkbox label {
   margin: 20px 0 5px;
+  margin: 0;
   display: inline-block;
   cursor: pointer;
+  padding-left: 10px;
+}
+
+.moduleContent .form-content .card-section .form-wrap .form-checkbox .fa-check-circle,
+.moduleContent .form-content .card-section .form-wrap .form-checkbox .fa-exclamation-circle {
+  top: 28px;
+  left: 0;
+}
+
+.moduleContent .form-content .card-section .form-wrap .form-checkbox small.error {
+  color: #ff8478;
+  text-align: left;
+  padding-left: 23px;
+  bottom: auto;
+  top: 30px;
 }
 
 .moduleContent .form-content .card-section .form-wrap .termos {
@@ -1363,8 +1393,9 @@ footer p a {
 .moduleContent .form-content .card-section .form-wrap .termos .form-check-label {
   display: block;
   position: relative;
-  padding-left: 24px;
+  padding-left: 10px;
   margin-bottom: 12px;
+  margin-bottom: 0;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
