@@ -61,7 +61,7 @@
                         <input type='hidden' name='page' value='assinar_cc'>
                         <input type='hidden' name='origem' value='##ORIGEM##'>
                         <input type='hidden' name='id_tipo_assinatura' value='##ID_TIPO_ASSINATURA##'>
-                        <input type="hidden" name="pgCheckout" value="pagamento" />
+                        <input type="hidden" name="pgCheckout" value="home" />
                         <input type="hidden" name="pgObrigado" value="obrigado" />
                         <input type="hidden" name="exp_c" id="exp_c"/>
 
@@ -241,10 +241,10 @@
                                     <small class="error">Error Message</small>
                                 </div>
 
-                                <div class="form-checkbox termos">
+                                <div class="form-input form-checkbox termos">
                                     
                                     <label class="link-terms form-check-label" for="terms">Li e Aceito os <a href="?page=navega&pg=termos" style="color: #75E2F8;" target="_blank">Termos de Uso</a>
-                                        <input type="checkbox" class="checkbox form-check-input" name="envia_email_produto" id="terms"  onchange="this.setCustomValidity(validity.valueMissing ? 'Indique que você aceita os Termos de Uso' : '');" required checked>
+                                        <input type="checkbox" class="checkbox form-check-input" name="termos" id="terms"  onchange="this.setCustomValidity(validity.valueMissing ? 'Indique que você aceita os Termos de Uso' : '');" required checked>
                                         <span class="checkmark"></span>
                                     </label>
                                     <i class="fas fa-check-circle"></i>
@@ -263,7 +263,7 @@
                         
 
                         <div class="form-cont-btn">
-                            <button class="btn" id="btn-submit">
+                            <button type="submit" class="btn" id="btn-submit">
                                 Confirmar pedido
                             </button>
                         </div>
@@ -353,7 +353,7 @@
     </script>
 
     <script src="js/jquery.mask.min.js"></script>
-    <script src="js/pagamento05.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 

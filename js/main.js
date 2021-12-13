@@ -437,7 +437,7 @@ function inputEmailConfirmCheck() {
 
     if(emailConfirmValue !== emailValue) {
         setErrorFor(email, "");
-        setErrorFor(emailConfirm, "Este e-mail é diferente do anterior, por favor, digite o mesmo e-mail!")
+        setErrorFor(emailConfirm, "Por favor, digite o mesmo e-mail!")
         return false;
     }
 
@@ -455,7 +455,7 @@ function inputNumberCardCheck() {
     } 
     
     if(numeroCValue.length < 16) {
-        setErrorFor(numeroC, "Este campo precisa ter o padrão EX: 0000 0000 0000 0000");
+        setErrorFor(numeroC, "EX: 0000 0000 0000 0000");
         return false;
     }
 
