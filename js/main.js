@@ -8,6 +8,8 @@ onKeyPress: function(val, e, field, options) {
 };
 
 $(document).ready(function() {
+    Iugu.setAccountID("631DB7976451F426994FFA698EC7FE81");
+
     $("#nome").blur(function(){marcaEvento('#nome','pagamento','preenchimento')});
     $("#cpf").blur(function(){marcaEvento('#cpf','pagamento','preenchimento')});
     $("#cep").blur(function(){marcaEvento('#cep','pagamento','preenchimento')});
@@ -559,13 +561,45 @@ async function inputCheckAll() {
 };
 
 btnSubmit.addEventListener("click", async(e) => {
-    e.preventDefault();
-    const inputCheckAwait = await inputCheckAll();
+  e.preventDefault();
+  const inputCheckAwait = await inputCheckAll();
+  
+  if( inputCheckAwait === true ) {
+    
+    const numeroCValue = numeroC.value.trim().replace(" ", "").replace(" ", "").replace(" ", "");
 
-    if( inputCheckAwait === true ) {
-        formSubmit.submit();
-        // location.href = "?page=navega&pg=obrigado"
-    }
+    const nomeSobrenome = nomeC.value.split(' ', 1);
+    nomeSobrenome.push(nomeC.value.slice(nomeSobrenome.join('').length).trim());
+
+    const expCValue = expC.value.split("/");
+    const mes = expCValue[0];
+    const ano = expCValue[1];
+    const codigoSegurancaValue = codigoSeguranca.value.trim();
+
+    var cc = Iugu.CreditCard(numeroCValue, mes, ano, nomeSobrenome[0],nomeSobrenome[1], codigoSegurancaValue);
+
+    if(cc.valid()){
+      Iugu.createPaymentToken(cc, function(response) {
+        if (response.errors) {
+            setErrorFor(numeroC, "Dados inválidos.");
+            return false;
+        } else {
+            const token = response.id;
+            //AQUI TEMOS QUE RETIRAR DADOS ENVIADOS PARA O SV
+            document.getElementById("exp_c").name = "";
+            document.getElementById("cvv_c").name = "";
+            document.getElementById("number_c").name = "";
+            document.getElementById("tokenIugu").value = token;
+
+            formSubmit.submit();
+        }   
+      });
+    }else{
+      setErrorFor(numeroC, "Dados incorretos do cartão de crédito");
+      return false;
+    }      
+
+  }
 });
 
 

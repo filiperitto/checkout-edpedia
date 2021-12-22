@@ -1719,4 +1719,101 @@ footer p a {
 .obrigado-fix footer {
   margin: 0;
 }
+
+.page-home header {
+  height: 79px;
+  padding: 0;
+  background: #22222b;
+  border-bottom: 1px solid #0B4E56;
+}
+
+.page-home header img {
+  width: 100%;
+  max-width: 122px;
+  height: auto;
+}
+
+.moduloHome {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(41, 41, 50, 0);
+  background-image: url(//d9hhrg4mnvzow.cloudfront.net/lp.edpedia.com.br/economia-para-investidores/738468e2-img-pg-mobile-v3.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  border-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  width: 100%;
+  padding: 130px 0;
+  position: relative;
+}
+
+.moduloHome .img-curso {
+  width: 100%;
+  max-width: 120px;
+  margin-bottom: 30px;
+}
+
+.moduloHome .wrap-btn {
+  display: block;
+}
+
+.moduloHome .wrap-btn p {
+  display: table;
+  padding: 10px;
+  color: #fff;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #83DEDD;
+  border-radius: 8px;
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.moduloHome h1 {
+  color: #fff;
+}
+
+.moduloHome p {
+  color: #fff;
+  font-weight: 300;
+}
+
+.moduloHome .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-style: none;
+  border-radius: 4px;
+  z-index: 8;
+  width: 259px;
+  height: 56px;
+  background: #36a4a2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  font-family: Work Sans;
+  font-style: normal;
+  text-align: center;
+  background-repeat: no-repeat;
+}
 /*# sourceMappingURL=style.css.map */
